@@ -1,0 +1,13 @@
+"D:\Program Files\IAR for arm 7.2\arm\bin\armproc.dll" 
+
+"D:\Program Files\IAR for arm 7.2\arm\bin\armstlink.dll" 
+
+"E:\项目资料\2016\SDJR\软件\V1.0\IAR_PRJ\Debug\Exe\SDJR_Project.out" 
+
+--plugin "D:\Program Files\IAR for arm 7.2\arm\bin\armbat.dll" 
+
+--device_macro "D:\Program Files\IAR for arm 7.2\arm\config\debugger\ST\STM32F1xx.dmac" 
+
+
+
+

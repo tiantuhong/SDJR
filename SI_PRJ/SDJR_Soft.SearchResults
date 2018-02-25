@@ -1,0 +1,6 @@
+---- PathPlanEn Matches (5 in 3 files) ----
+
+PathPlan.c (e:\tht\jy\v3.02_0221\user\src):FunctionalState PathPlanEn,UltraSignalCalEn;
+PathPlan.c (e:\tht\jy\v3.02_0221\user\src):	if(!PathPlanEn)
+PathPlan.c (e:\tht\jy\v3.02_0221\user\src):	PathPlanEn = DISABLE;
+PathPlan.h (e:\tht\jy\v3.02_0221\user\inc):extern FunctionalState PathPlanEn;

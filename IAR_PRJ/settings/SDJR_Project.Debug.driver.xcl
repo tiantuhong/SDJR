@@ -1,0 +1,23 @@
+"--endian=little" 
+
+"--cpu=Cortex-M3" 
+
+"--fpu=None" 
+
+"-p" 
+
+"D:\Program Files\IAR for arm 7.2\arm\CONFIG\debugger\ST\STM32F100xB.ddf" 
+
+"--semihosting" 
+
+"--device=STM32F100xB" 
+
+"--drv_interface=SWD" 
+
+"--stlink_reset_strategy=0,0" 
+
+"--drv_swo_clock_setup=24000000,1,2000000" 
+
+
+
+
