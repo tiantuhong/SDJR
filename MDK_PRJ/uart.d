@@ -1,9 +1,9 @@
 .\uart.o: ..\USER\src\UART.c
 .\uart.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x.h
-.\uart.o: D:\Program Files\keil\ARM\CMSIS\Include\core_cm3.h
-.\uart.o: D:\Program Files\keil\ARM\ARMCC\bin\..\include\stdint.h
-.\uart.o: D:\Program Files\keil\ARM\CMSIS\Include\core_cmInstr.h
-.\uart.o: D:\Program Files\keil\ARM\CMSIS\Include\core_cmFunc.h
+.\uart.o: D:\Program Files\Keil4\ARM\CMSIS\Include\core_cm3.h
+.\uart.o: D:\Program Files\Keil4\ARM\ARMCC\bin\..\include\stdint.h
+.\uart.o: D:\Program Files\Keil4\ARM\CMSIS\Include\core_cmInstr.h
+.\uart.o: D:\Program Files\Keil4\ARM\CMSIS\Include\core_cmFunc.h
 .\uart.o: ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h
 .\uart.o: ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x_conf.h
 .\uart.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h
@@ -32,6 +32,6 @@
 .\uart.o: ..\USER\inc\Voice.h
 .\uart.o: ..\USER\inc\handshake.h
 .\uart.o: ..\Libraries\vl53l0x\vl53l0x.h
-.\uart.o: D:\Program Files\keil\ARM\ARMCC\bin\..\include\string.h
-.\uart.o: D:\Program Files\keil\ARM\ARMCC\bin\..\include\math.h
+.\uart.o: D:\Program Files\Keil4\ARM\ARMCC\bin\..\include\string.h
+.\uart.o: D:\Program Files\Keil4\ARM\ARMCC\bin\..\include\math.h
 .\uart.o: ..\USER\inc\imu.h

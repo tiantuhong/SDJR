@@ -1,9 +1,9 @@
 .\battery.o: ..\USER\src\Battery.c
 .\battery.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x.h
-.\battery.o: D:\Program Files\keil\ARM\CMSIS\Include\core_cm3.h
-.\battery.o: D:\Program Files\keil\ARM\ARMCC\bin\..\include\stdint.h
-.\battery.o: D:\Program Files\keil\ARM\CMSIS\Include\core_cmInstr.h
-.\battery.o: D:\Program Files\keil\ARM\CMSIS\Include\core_cmFunc.h
+.\battery.o: D:\Program Files\Keil4\ARM\CMSIS\Include\core_cm3.h
+.\battery.o: D:\Program Files\Keil4\ARM\ARMCC\bin\..\include\stdint.h
+.\battery.o: D:\Program Files\Keil4\ARM\CMSIS\Include\core_cmInstr.h
+.\battery.o: D:\Program Files\Keil4\ARM\CMSIS\Include\core_cmFunc.h
 .\battery.o: ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h
 .\battery.o: ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x_conf.h
 .\battery.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h

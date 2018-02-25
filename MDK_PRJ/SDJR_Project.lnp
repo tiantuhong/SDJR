@@ -1,6 +1,7 @@
 --cpu Cortex-M3
 ".\core_cm3.o"
 ".\system_stm32f10x.o"
+".\vl53l0x_continuousranging_example.o"
 ".\main.o"
 ".\init.o"
 ".\adc.o"
@@ -52,7 +53,6 @@
 ".\vl53l0x_api_strings.o"
 ".\vl53l0x_platform.o"
 ".\vl53l0x_platform_log.o"
-".\vl53l0x_continuousranging_example.o"
 --strict --scatter ".\SDJR_Project.sct"
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

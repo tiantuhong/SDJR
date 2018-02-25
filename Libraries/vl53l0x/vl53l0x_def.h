@@ -160,6 +160,10 @@ typedef int8_t VL53L0X_Error;
 #define VL53L0X_ERROR_INTERRUPT_NOT_CLEARED		((VL53L0X_Error) -12)
 	/*!< Error during interrupt clear */
 #define VL53L0X_ERROR_CONTROL_INTERFACE			((VL53L0X_Error) -20)
+#define VL53L0X_ERROR_CONTROL_INTERFACE_1		((VL53L0X_Error) -21)
+#define VL53L0X_ERROR_CONTROL_INTERFACE_2		((VL53L0X_Error) -22)
+#define VL53L0X_ERROR_CONTROL_INTERFACE_3		((VL53L0X_Error) -23)
+#define VL53L0X_ERROR_CONTROL_INTERFACE_4		((VL53L0X_Error) -24)
 	/*!< error reported from IO functions */
 #define VL53L0X_ERROR_INVALID_COMMAND			((VL53L0X_Error) -30)
 	/*!< The command is not allowed in the current device state

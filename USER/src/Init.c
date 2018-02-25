@@ -901,7 +901,7 @@ void TIM6_IRQHandler(void)
 		{
 			Cnt5 = 0;
 			Ultra_En = ENABLE;		
-            vl53l0x_Mesure_En = 0;    
+            vl53l0x_Mesure_En = 1;    
 		}
 		if(BatteryCheckEn)
 		{

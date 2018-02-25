@@ -34,10 +34,10 @@ int main(void)
 //		motion_updata_pos();
         
 //		Init_ADXL345();
-        ICM_Init();
+//        ICM_Init();
         Gyro_Calibration();
-        ChargeManageInit();
-//        vl53l0x_Measurement();
+//        ChargeManageInit();
+        vl53l0x_test();
 //        Voice_Deal();
         I2C_Deal();     
     }

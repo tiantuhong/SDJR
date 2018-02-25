@@ -16,7 +16,7 @@ uint8_t vl53l0x_Mesure_En = 0;
 void print_pal_error(VL53L0X_Error Status){
     char buf[VL53L0X_MAX_STRING_LENGTH];
     VL53L0X_GetPalErrorString(Status, buf);
-    printf("API Status: %i : %s\n", Status, buf);
+//    printf("API Status: %i : %s\n", Status, buf);
 }
 
 void print_range_status(VL53L0X_RangingMeasurementData_t* pRangingMeasurementData){
@@ -30,7 +30,7 @@ void print_range_status(VL53L0X_RangingMeasurementData_t* pRangingMeasurementDat
     RangeStatus = pRangingMeasurementData->RangeStatus;
 
     VL53L0X_GetRangeStatusString(RangeStatus, buf);
-    printf("Range Status: %i : %s\n", RangeStatus, buf);
+//    printf("Range Status: %i : %s\n", RangeStatus, buf);
 
 }
 
@@ -101,7 +101,7 @@ VL53L0X_Error rangingTest(VL53L0X_Dev_t *pMyDevice)
 
     if(Status == VL53L0X_ERROR_NONE)
     {
-        printf ("Call of VL53L0X_StaticInit\n");
+//        printf ("Call of VL53L0X_StaticInit\n");
         Status = VL53L0X_StaticInit(pMyDevice); // Device Initialization
         // StaticInit will set interrupt by default
         print_pal_error(Status);
@@ -109,7 +109,7 @@ VL53L0X_Error rangingTest(VL53L0X_Dev_t *pMyDevice)
     
     if(Status == VL53L0X_ERROR_NONE)
     {
-        printf ("Call of VL53L0X_PerformRefCalibration\n");
+//        printf ("Call of VL53L0X_PerformRefCalibration\n");
         Status = VL53L0X_PerformRefCalibration(pMyDevice,
         		&VhvSettings, &PhaseCal); // Device Initialization
         print_pal_error(Status);
@@ -117,7 +117,7 @@ VL53L0X_Error rangingTest(VL53L0X_Dev_t *pMyDevice)
 
     if(Status == VL53L0X_ERROR_NONE)
     {
-        printf ("Call of VL53L0X_PerformRefSpadManagement\n");
+//        printf ("Call of VL53L0X_PerformRefSpadManagement\n");
         Status = VL53L0X_PerformRefSpadManagement(pMyDevice,
         		&refSpadCount, &isApertureSpads); // Device Initialization
         print_pal_error(Status);
@@ -126,14 +126,14 @@ VL53L0X_Error rangingTest(VL53L0X_Dev_t *pMyDevice)
     if(Status == VL53L0X_ERROR_NONE)
     {
 
-        printf ("Call of VL53L0X_SetDeviceMode\n");
+//        printf ("Call of VL53L0X_SetDeviceMode\n");
         Status = VL53L0X_SetDeviceMode(pMyDevice, VL53L0X_DEVICEMODE_CONTINUOUS_RANGING); // Setup in single ranging mode
         print_pal_error(Status);
     }
     
     if(Status == VL53L0X_ERROR_NONE)
     {
-		printf ("Call of VL53L0X_StartMeasurement\n");
+//		printf ("Call of VL53L0X_StartMeasurement\n");
 		Status = VL53L0X_StartMeasurement(pMyDevice);
 		print_pal_error(Status);
     }
@@ -155,7 +155,7 @@ VL53L0X_Error rangingTest(VL53L0X_Dev_t *pMyDevice)
                 Status = VL53L0X_GetRangingMeasurementData(pMyDevice, pRangingMeasurementData);
 
                 *(pResults + measurement) = pRangingMeasurementData->RangeMilliMeter;
-                printf("In loop measurement %d: %d\n", measurement, pRangingMeasurementData->RangeMilliMeter);
+//                printf("In loop measurement %d: %d\n", measurement, pRangingMeasurementData->RangeMilliMeter);
 
                 // Clear the interrupt
                 VL53L0X_ClearInterruptMask(pMyDevice, VL53L0X_REG_SYSTEM_INTERRUPT_GPIO_NEW_SAMPLE_READY);
@@ -169,7 +169,7 @@ VL53L0X_Error rangingTest(VL53L0X_Dev_t *pMyDevice)
         {
             for(measurement=0; measurement<no_of_measurements; measurement++)
             {
-                printf("measurement %d: %d\n", measurement, *(pResults + measurement));
+//                printf("measurement %d: %d\n", measurement, *(pResults + measurement));
             }
         }
 
@@ -179,13 +179,13 @@ VL53L0X_Error rangingTest(VL53L0X_Dev_t *pMyDevice)
     
     if(Status == VL53L0X_ERROR_NONE)
     {
-        printf ("Call of VL53L0X_StopMeasurement\n");
+//        printf ("Call of VL53L0X_StopMeasurement\n");
         Status = VL53L0X_StopMeasurement(pMyDevice);
     }
 
     if(Status == VL53L0X_ERROR_NONE)
     {
-        printf ("Wait Stop to be competed\n");
+//        printf ("Wait Stop to be competed\n");
         Status = WaitStopCompleted(pMyDevice);
     }
 
@@ -198,8 +198,8 @@ VL53L0X_Error rangingTest(VL53L0X_Dev_t *pMyDevice)
 
 uint8_t vl53l0x_Init(void)
 {
-//    VL53L0X_Error Status = VL53L0X_ERROR_NONE;
-    static uint8_t Status = 4;
+    VL53L0X_Error Status = VL53L0X_ERROR_NONE;
+//    static uint8_t Status = 3;
     
     uint32_t refSpadCount;
     uint8_t isApertureSpads;
@@ -212,43 +212,46 @@ uint8_t vl53l0x_Init(void)
     pMyDevice->comms_type      =  1;
     pMyDevice->comms_speed_khz =  400;
     
-    if(Status == 0)
+    if(Status == VL53L0X_ERROR_NONE)
+    {
+        Status = VL53L0X_DataInit(pMyDevice); // Device Initialization
+        // StaticInit will set interrupt by default
+    }
+    
+    if(Status == VL53L0X_ERROR_NONE)
     {
         Status = VL53L0X_StaticInit(pMyDevice); // Device Initialization
         // StaticInit will set interrupt by default
-        Status = 1;
     }
     
-    else if(Status == 1)
+    if(Status == VL53L0X_ERROR_NONE)
     {
         Status = VL53L0X_PerformRefCalibration(pMyDevice,
         		&VhvSettings, &PhaseCal); // Device Initialization
-        Status = 2;
     }
 
-    else if(Status == 2)
+    if(Status == VL53L0X_ERROR_NONE)
     {
         Status = VL53L0X_PerformRefSpadManagement(pMyDevice,
         		&refSpadCount, &isApertureSpads); // Device Initialization
-        Status = 3;
     }
 
-    else if(Status == 3)
+    if(Status == VL53L0X_ERROR_NONE)
     {
         Status = VL53L0X_SetDeviceMode(pMyDevice, VL53L0X_DEVICEMODE_CONTINUOUS_RANGING); // Setup in single ranging mode
-        Status = 4;
     }
     
-    else if(Status == 4)
+    if(Status == VL53L0X_ERROR_NONE)
     {
 		Status = VL53L0X_StartMeasurement(pMyDevice);
-        Status = 5;
     }
     return Status;
 }
 
-void vl53l0x_Measurement(void)
+
+void vl53l0x_test(void)
 {
+    
     static uint8_t init = 0;
     VL53L0X_Error Status = VL53L0X_ERROR_NONE;
     //¶¨Ê±30ms
@@ -256,9 +259,10 @@ void vl53l0x_Measurement(void)
         return;
     vl53l0x_Mesure_En = 0;
     
+    
     if(!init)
     {
-        if(vl53l0x_Init() == 5)
+        if(vl53l0x_Init() == VL53L0X_ERROR_NONE)
             init = 1;
         return;
     }
@@ -281,160 +285,4 @@ void vl53l0x_Measurement(void)
     }
 }
 
-#if 0
-int main(int argc, char **argv)
-{
-    VL53L0X_Error Status = VL53L0X_ERROR_NONE;
-    VL53L0X_Dev_t MyDevice;
-    VL53L0X_Dev_t *pMyDevice = &MyDevice;
-    VL53L0X_Version_t                   Version;
-    VL53L0X_Version_t                  *pVersion   = &Version;
-    VL53L0X_DeviceInfo_t                DeviceInfo;
 
-    int32_t status_int;
-    int32_t init_done = 0;
-    int NecleoComStatus = 0;
-    int NecleoAutoCom = 1;
-    TCHAR SerialCommStr[MAX_VALUE_NAME];
-
-    if (argc == 1 ) {
-	   printf("Nucleo Automatic detection selected!\n");	
-	   printf("To Specify a COM use: %s <yourCOM> \n", argv[0]);
-    } else if (argc == 2 ) {
-	   printf("Nucleo Manual COM selected!\n");
-	   strcpy(SerialCommStr,argv[1]);	   
-	   printf("You have specified %s \n", SerialCommStr);
-	   NecleoAutoCom = 0;
-    } else {
-	   printf("ERROR: wrong parameters !\n");	
-           printf("USAGE : %s <yourCOM> \n", argv[0]);
-	   return(1);
-    }
-
-
-    printf ("VL53L0X PAL Continuous Ranging example\n\n");
-//    printf ("Press a Key to continue!");
-//    getchar();
-
-
-    if (NecleoAutoCom == 1) {
-    // Get the number of the COM attached to the Nucleo
-    // Note that the following function will look for the 
-    // Nucleo with name USBSER000 so be careful if you have 2 Nucleo 
-    // inserted
-
-    printf("Detect Nucleo Board ...");
-    NecleoComStatus = GetNucleoSerialComm(SerialCommStr);
-    
-    if ((NecleoComStatus == 0) || (strcmp(SerialCommStr, "") == 0)) {
-		    printf("Error Nucleo Board not Detected!\n");
-	    return(1);
-    }
-    
-	    printf("Nucleo Board detected on %s\n\n", SerialCommStr);
-    }
-
-    // Initialize Comms
-    pMyDevice->I2cDevAddr      = 0x52;
-    pMyDevice->comms_type      =  1;
-    pMyDevice->comms_speed_khz =  400;
-
-    Status = VL53L0X_i2c_init(SerialCommStr, 460800);
-    if (Status != VL53L0X_ERROR_NONE) {
-        Status = VL53L0X_ERROR_CONTROL_INTERFACE;
-        init_done = 1;
-    } else
-        printf ("Init Comms\n");
-
-    /*
-     * Disable VL53L0X API logging if you want to run at full speed
-     */
-#ifdef VL53L0X_LOG_ENABLE
-    VL53L0X_trace_config("test.log", TRACE_MODULE_ALL, TRACE_LEVEL_ALL, TRACE_FUNCTION_ALL);
-#endif
-
-    /*
-     *  Get the version of the VL53L0X API running in the firmware
-     */
-
-    if(Status == VL53L0X_ERROR_NONE)
-    {
-        status_int = VL53L0X_GetVersion(pVersion);
-        if (status_int != 0)
-            Status = VL53L0X_ERROR_CONTROL_INTERFACE;
-    }
-
-    /*
-     *  Verify the version of the VL53L0X API running in the firmrware
-     */
-
-    if(Status == VL53L0X_ERROR_NONE)
-    {
-        if( pVersion->major != VERSION_REQUIRED_MAJOR ||
-            pVersion->minor != VERSION_REQUIRED_MINOR ||
-            pVersion->build != VERSION_REQUIRED_BUILD )
-        {
-            printf("VL53L0X API Version Error: Your firmware has %d.%d.%d (revision %d). This example requires %d.%d.%d.\n",
-                pVersion->major, pVersion->minor, pVersion->build, pVersion->revision,
-                VERSION_REQUIRED_MAJOR, VERSION_REQUIRED_MINOR, VERSION_REQUIRED_BUILD);
-        }
-    }
-
-    // End of implementation specific
-    if(Status == VL53L0X_ERROR_NONE)
-    {
-        printf ("Call of VL53L0X_DataInit\n");
-        Status = VL53L0X_DataInit(&MyDevice); // Data initialization
-        print_pal_error(Status);
-    }
-    
-    if(Status == VL53L0X_ERROR_NONE)
-    {
-        Status = VL53L0X_GetDeviceInfo(&MyDevice, &DeviceInfo);
-    }
-    if(Status == VL53L0X_ERROR_NONE)
-    {
-        printf("VL53L0X_GetDeviceInfo:\n");
-        printf("Device Name : %s\n", DeviceInfo.Name);
-        printf("Device Type : %s\n", DeviceInfo.Type);
-        printf("Device ID : %s\n", DeviceInfo.ProductId);
-        printf("ProductRevisionMajor : %d\n", DeviceInfo.ProductRevisionMajor);
-        printf("ProductRevisionMinor : %d\n", DeviceInfo.ProductRevisionMinor);
-
-        if ((DeviceInfo.ProductRevisionMinor != 1) && (DeviceInfo.ProductRevisionMinor != 1)) {
-        	printf("Error expected cut 1.1 but found cut %d.%d\n",
-        			DeviceInfo.ProductRevisionMajor, DeviceInfo.ProductRevisionMinor);
-        	Status = VL53L0X_ERROR_NOT_SUPPORTED;
-        }
-    }
-    
-    if(Status == VL53L0X_ERROR_NONE)
-    {
-        Status = rangingTest(pMyDevice);
-    }
-
-    print_pal_error(Status);
-    
-    // Implementation specific
-
-    /*
-     *  Disconnect comms - part of VL53L0X_platform.c
-     */
-
-    if(init_done == 0)
-    {
-        printf ("Close Comms\n");
-        status_int = VL53L0X_comms_close();
-        if (status_int != 0)
-            Status = VL53L0X_ERROR_CONTROL_INTERFACE;
-    }
-
-    print_pal_error(Status);
-    // End of implementation specific
-    
-//    printf ("Press a Key to continue!");
-//    getchar();
-    
-    return (0);
-}
-#endif

@@ -28,23 +28,23 @@
 /*----------------------------------------------*
  * 外部变量说明                                 *
  *----------------------------------------------*/
-typedef struct
-{
-    uint8_t I2C_SendBuf[10]; //发送缓存
-    
-    uint8_t I2C_SendBytes;      //发送字节数
-    
-//    uint8_t I2C_SendPts;        //发送个数
-    
-    uint8_t I2C_Device;         //发送设备
-    
-    uint8_t I2C_Dir;            //发送方向
-    
-    uint8_t I2C_RevBytes;       //接收字节数
-    
-    uint8_t *RevData;           //接收数据
-    
-} I2CData_TypeDef;
+//typedef struct
+//{
+//    uint8_t I2C_SendBuf[10]; //发送缓存
+//    
+//    uint8_t I2C_SendBytes;      //发送字节数
+//    
+////    uint8_t I2C_SendPts;        //发送个数
+//    
+//    uint8_t I2C_Device;         //发送设备
+//    
+//    uint8_t I2C_Dir;            //发送方向
+//    
+//    uint8_t I2C_RevBytes;       //接收字节数
+//    
+//    uint8_t *RevData;           //接收数据
+//    
+//} I2CData_TypeDef;
 /*----------------------------------------------*
  * 外部函数原型说明                             *
  *----------------------------------------------*/
@@ -952,13 +952,17 @@ void I2C2_EV_IRQHandler(void)
         }
         else
         {
-           
+            
             if(I2C_Core->I2C_Dir == I2C_DIR_RW)
             {
                 ///--------1-1-1-1-1-1--1-1-1-
 //                I2C_Core->I2C_Device = I2C_DEVICE_ADXL345;
                 I2C_Core->I2C_Dir = I2C_DIR_READ;
                 I2C_GenerateSTART(I2C2, ENABLE);
+            }
+            else
+            {
+                I2C_Status = 0;
             }
 
         }

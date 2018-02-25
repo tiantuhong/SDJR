@@ -1,9 +1,9 @@
 .\voice.o: ..\USER\src\Voice.c
 .\voice.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x.h
-.\voice.o: D:\Program Files\keil\ARM\CMSIS\Include\core_cm3.h
-.\voice.o: D:\Program Files\keil\ARM\ARMCC\bin\..\include\stdint.h
-.\voice.o: D:\Program Files\keil\ARM\CMSIS\Include\core_cmInstr.h
-.\voice.o: D:\Program Files\keil\ARM\CMSIS\Include\core_cmFunc.h
+.\voice.o: D:\Program Files\Keil4\ARM\CMSIS\Include\core_cm3.h
+.\voice.o: D:\Program Files\Keil4\ARM\ARMCC\bin\..\include\stdint.h
+.\voice.o: D:\Program Files\Keil4\ARM\CMSIS\Include\core_cmInstr.h
+.\voice.o: D:\Program Files\Keil4\ARM\CMSIS\Include\core_cmFunc.h
 .\voice.o: ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h
 .\voice.o: ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x_conf.h
 .\voice.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h

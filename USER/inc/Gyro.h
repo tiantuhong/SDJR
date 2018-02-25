@@ -52,6 +52,24 @@ typedef struct
     uint8_t DataReady;   //数据已准备好
 }Gyro_6Axis_TypeDef;
 
+typedef struct
+{
+    uint8_t I2C_SendBuf[10]; //发送缓存
+    
+    uint8_t I2C_SendBytes;      //发送字节数
+    
+//    uint8_t I2C_SendPts;        //发送个数
+    
+    uint8_t I2C_Device;         //发送设备
+    
+    uint8_t I2C_Dir;            //发送方向
+    
+    uint8_t I2C_RevBytes;       //接收字节数
+    
+    uint8_t *RevData;           //接收数据
+    
+} I2CData_TypeDef;
+
 #pragma pack(pop)
 
 extern int16_t Sys_Angle,Sys_Anglerate,Sys_AnglePre, Sys_Angle2, Sys_AnglexInit;
@@ -62,6 +80,7 @@ extern uint8_t Battery_Charge_En;
 extern uint16_t Icm_Init_Cnt;
 extern Gyro_6Axis_TypeDef IcmDataByKalman;
 extern uint8_t I2C_Status ;
+extern I2CData_TypeDef I2C_VL53L0X;
 
 extern void IIC_Test(void);
 extern void Gyro_Conf(void);

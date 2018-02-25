@@ -1,9 +1,9 @@
 .\gyro_i2c.o: ..\USER\src\Gyro_I2C.c
 .\gyro_i2c.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x.h
-.\gyro_i2c.o: D:\Program Files\keil\ARM\CMSIS\Include\core_cm3.h
-.\gyro_i2c.o: D:\Program Files\keil\ARM\ARMCC\bin\..\include\stdint.h
-.\gyro_i2c.o: D:\Program Files\keil\ARM\CMSIS\Include\core_cmInstr.h
-.\gyro_i2c.o: D:\Program Files\keil\ARM\CMSIS\Include\core_cmFunc.h
+.\gyro_i2c.o: D:\Program Files\Keil4\ARM\CMSIS\Include\core_cm3.h
+.\gyro_i2c.o: D:\Program Files\Keil4\ARM\ARMCC\bin\..\include\stdint.h
+.\gyro_i2c.o: D:\Program Files\Keil4\ARM\CMSIS\Include\core_cmInstr.h
+.\gyro_i2c.o: D:\Program Files\Keil4\ARM\CMSIS\Include\core_cmFunc.h
 .\gyro_i2c.o: ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h
 .\gyro_i2c.o: ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x_conf.h
 .\gyro_i2c.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h
@@ -34,6 +34,6 @@
 .\gyro_i2c.o: ..\Libraries\vl53l0x\vl53l0x.h
 .\gyro_i2c.o: ..\USER\inc\kalman_filter.h
 .\gyro_i2c.o: ..\USER\inc\imu.h
-.\gyro_i2c.o: D:\Program Files\keil\ARM\ARMCC\bin\..\include\math.h
+.\gyro_i2c.o: D:\Program Files\Keil4\ARM\ARMCC\bin\..\include\math.h
 .\gyro_i2c.o: ..\USER\inc\IMUSO3.h
-.\gyro_i2c.o: D:\Program Files\keil\ARM\ARMCC\bin\..\include\string.h
+.\gyro_i2c.o: D:\Program Files\Keil4\ARM\ARMCC\bin\..\include\string.h

@@ -1,9 +1,9 @@
 .\init.o: ..\USER\src\Init.c
 .\init.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x.h
-.\init.o: D:\Program Files\keil\ARM\CMSIS\Include\core_cm3.h
-.\init.o: D:\Program Files\keil\ARM\ARMCC\bin\..\include\stdint.h
-.\init.o: D:\Program Files\keil\ARM\CMSIS\Include\core_cmInstr.h
-.\init.o: D:\Program Files\keil\ARM\CMSIS\Include\core_cmFunc.h
+.\init.o: D:\Program Files\Keil4\ARM\CMSIS\Include\core_cm3.h
+.\init.o: D:\Program Files\Keil4\ARM\ARMCC\bin\..\include\stdint.h
+.\init.o: D:\Program Files\Keil4\ARM\CMSIS\Include\core_cmInstr.h
+.\init.o: D:\Program Files\Keil4\ARM\CMSIS\Include\core_cmFunc.h
 .\init.o: ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h
 .\init.o: ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x_conf.h
 .\init.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h
@@ -33,4 +33,4 @@
 .\init.o: ..\USER\inc\handshake.h
 .\init.o: ..\Libraries\vl53l0x\vl53l0x.h
 .\init.o: ..\USER\inc\imu.h
-.\init.o: D:\Program Files\keil\ARM\ARMCC\bin\..\include\math.h
+.\init.o: D:\Program Files\Keil4\ARM\ARMCC\bin\..\include\math.h
