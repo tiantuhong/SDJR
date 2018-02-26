@@ -563,11 +563,13 @@ ARM Macro Assembler    Page 9
               00000400 
               00000200 
               00000000 
-Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\startu
-p_stm32f10x_hd.d -o.\startup_stm32f10x_hd.o -I"D:\Program Files\keil\ARM\RV31\I
-NC" -I"D:\Program Files\keil\ARM\CMSIS\Include" -I"D:\Program Files\keil\ARM\In
-c\ST\STM32F10x" --list=.\startup_stm32f10x_hd.lst ..\Libraries\CMSIS\CM3\Device
-Support\ST\STM32F10x\startup\arm\startup_stm32f10x_hd.s
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
+ork --depend=.\startup_stm32f10x_hd.d -o.\startup_stm32f10x_hd.o -I.\RTE\_SDJR_
+Project -I"D:\Program Files\Keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include" -I"D:
+\Program Files\Keil5\ARM\PACK\ARM\CMSIS\5.0.1\Device\ARM\ARMCM3\Include" --pred
+efine="__UVISION_VERSION SETA 523" --predefine="_RTE_ SETA 1" --predefine="ARMC
+M3 SETA 1" --list=.\startup_stm32f10x_hd.lst ..\Libraries\CMSIS\CM3\DeviceSuppo
+rt\ST\STM32F10x\startup\arm\startup_stm32f10x_hd.s
 
 
 
@@ -1728,4 +1730,4 @@ rtup\arm\startup_stm32f10x_hd.s
       None
 Comment: __use_two_region_memory unused
 3 symbols
-423 symbols in table
+426 symbols in table

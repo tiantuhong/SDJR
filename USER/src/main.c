@@ -8,32 +8,29 @@ int main(void)
     
 	while(1)
     {	
-		UART_ResponseMaster();
-		UART2_SendData();
+        UART_ResponseMaster();
+        UART2_SendData();
         handshakepresec();
         Uart_RcvData_Proc();
         Uart2_RcvData_Proc();
         CalSpeed();
-		MotorStartupCtrl();
+        MotorStartupCtrl();
         AccCtrl();
         Robit_RouteMoving();
         MotorRunCtrl();
-		MotorBlockCtrl();
-		Key_Scan();
-		Display();
-		ADC_Deal();	
+        MotorBlockCtrl();
+        Key_Scan();
+        Display();
+        ADC_Deal();	
         CarpetCheck();
-		BatterySocCheck();
-//		BatteryCharge();	
-		Actuator_Deal();       				
-		MotorStopCtrl();		
-		RobitMode_Ctrl();
-		SignalCheck();
-		Ultra_Check();
-		PathPlan();
-//		motion_updata_pos();
+        BatterySocCheck();	
+        Actuator_Deal();       				
+        MotorStopCtrl();		
+        RobitMode_Ctrl();
+        SignalCheck();
+        Ultra_Check();
+        PathPlan();
         
-//		Init_ADXL345();
 //        ICM_Init();
         Gyro_Calibration();
 //        ChargeManageInit();

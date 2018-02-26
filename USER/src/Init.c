@@ -851,6 +851,8 @@ void TIM6_IRQHandler(void)
 			DisplayScanEn = ENABLE;
 //			Uart2_SendEn = ENABLE;
             Vocie_DealEn = 1;
+            
+            vl53l0x_Mesure_En = 1; 
 		}
 
 		if(++Cnt3 >= UART_Send_Fq)
@@ -901,7 +903,7 @@ void TIM6_IRQHandler(void)
 		{
 			Cnt5 = 0;
 			Ultra_En = ENABLE;		
-            vl53l0x_Mesure_En = 1;    
+               
 		}
 		if(BatteryCheckEn)
 		{
