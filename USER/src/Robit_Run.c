@@ -985,8 +985,9 @@ void Robit_RouteMoving(void)
                         else if(2 == RobitRunbyRouteMode) // 沿墙行走模式
 //						else if(0 == RobitRunbyRouteMode)
                         {
-                            //20ms调整一次 角度调节  目标角度=计算输出角度
-                            if(AngleCnt >= 2)
+                            //40ms调整一次 角度调节  目标角度=计算输出角度
+                            //VL53L0x 一次测距需要33ms ，改为40ms调整一次
+                            if(AngleCnt >= 4)
                             {
                                 AngleCnt = 0;
                                 boundary(1);

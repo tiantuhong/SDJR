@@ -342,9 +342,14 @@ void SignalCheck(void)
     {
         ADCDataValid[7] = DISABLE;
                 
-        PSD_AD = filter_1_x(ADC_ConvertedValue_Val[7], PSD_AD, K_x, new_flag_x);
+//        PSD_AD = filter_1_x(ADC_ConvertedValue_Val[7], PSD_AD, K_x, new_flag_x);
+//        
+//        PSD_Distance = PSDVoltoDis(PSD_AD);
         
-        PSD_Distance = PSDVoltoDis(PSD_AD);
+        //测试VL53L0x的数据作为沿边的数据
+        PSD_AD = filter_1_x(vl53l0x_Results, PSD_AD, K_x, new_flag_x);
+        
+        PSD_Distance = PSD_AD << 3;//PSDVoltoDis(PSD_AD);
     }
 //#if 0
 //	if(ADCDataValid[7] == ENABLE)

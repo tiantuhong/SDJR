@@ -93,14 +93,15 @@ void Key_Scan(void)
     if(!GyroReady)
         return;
 
-	if(GPIO_ReadInputDataBit(GPIOD,GPIO_Pin_8))
-	{
-		Key_Code &= ~0x01; 
-	}
-	else
-	{
-		Key_Code |= 0x01;
-	}
+    // PD8暂时用于VL53L0x的中断做调试使用，按键1屏蔽
+//	if(GPIO_ReadInputDataBit(GPIOD,GPIO_Pin_8))
+//	{
+//		Key_Code &= ~0x01; 
+//	}
+//	else
+//	{
+//		Key_Code |= 0x01;
+//	}
 
 	if(GPIO_ReadInputDataBit(GPIOD,GPIO_Pin_9))
 	{
