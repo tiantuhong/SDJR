@@ -543,8 +543,8 @@ void UART2_SendData(void)
 //            SendBufPtr->Data[i] = VoiceCur.Data[i];
 //        }
         
-        SendBufPtr->Data[0] = RobitStatus;
-        SendBufPtr->Data[1] = SubStep;
+        SendBufPtr->Data[0] = vl53l0x_Results >> 8;
+        SendBufPtr->Data[1] = vl53l0x_Results;
         SendBufPtr->Data[2] = PathPlanStep;
         SendBufPtr->Data[3] = RobitRunbyRouteMode;
         SendBufPtr->Data[4] = LeftBump; 

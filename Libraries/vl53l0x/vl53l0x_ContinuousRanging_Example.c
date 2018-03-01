@@ -254,11 +254,11 @@ void vl53l0x_test(void)
     
     static uint8_t init = 0;
     VL53L0X_Error Status = VL53L0X_ERROR_NONE;
+    
     //¶¨Ê±30ms
     if(!vl53l0x_Mesure_En)
         return;
     vl53l0x_Mesure_En = 0;
-    
     
     if(!init)
     {
@@ -267,7 +267,11 @@ void vl53l0x_test(void)
         return;
     }
     
-    Status = WaitMeasurementDataReady(pMyDevice);
+    
+    
+
+    
+ //   Status = WaitMeasurementDataReady(pMyDevice);
 
     if(Status == VL53L0X_ERROR_NONE)
     {
@@ -285,4 +289,15 @@ void vl53l0x_test(void)
     }
 }
 
+void VL53L0X_IRQ(void)
+{
+//    VL53L0X_Error Status = VL53L0X_ERROR_NONE;
+    
+    VL53L0X_GetRangingMeasurementData(pMyDevice, pRangingMeasurementData);
 
+    vl53l0x_Results = pRangingMeasurementData->RangeMilliMeter;
+
+    // Clear the interrupt
+    VL53L0X_ClearInterruptMask(pMyDevice, VL53L0X_REG_SYSTEM_INTERRUPT_GPIO_NEW_SAMPLE_READY);
+    VL53L0X_PollingDelay(pMyDevice);
+}

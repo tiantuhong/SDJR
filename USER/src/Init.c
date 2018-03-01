@@ -134,7 +134,7 @@ void Device_Init( void )
     
     HandshakeInit();
     
-   
+   vl53l0x_Mesure_En = 1; 
 
 	SystemRunTime = 0;
     SystePwrMode = 0;
@@ -379,6 +379,9 @@ void EXIT_Conf( void )
 
 	//ÓÒÂÖ²âËÙÖÐ¶Ï
 	GPIO_EXTILineConfig(GPIO_PortSourceGPIOB, GPIO_PinSource5);
+    
+    //VL53L0xÖÐ¶Ï
+	GPIO_EXTILineConfig(GPIO_PortSourceGPIOD, GPIO_PinSource8);
 
 	//³¬Éù²¨²â¾àÖÐ¶Ï
 	GPIO_EXTILineConfig(GPIO_PortSourceGPIOB, GPIO_PinSource2);
@@ -394,6 +397,7 @@ void EXIT_Conf( void )
     EXTI_ClearITPendingBit(EXTI_Line2);
 	EXTI_ClearITPendingBit(EXTI_Line3);
 	EXTI_ClearITPendingBit(EXTI_Line5);
+    EXTI_ClearITPendingBit(EXTI_Line8);
 	EXTI_ClearITPendingBit(EXTI_Line12);
 	EXTI_ClearITPendingBit(EXTI_Line13);
 	EXTI_ClearITPendingBit(EXTI_Line14);
@@ -415,11 +419,11 @@ void EXIT_Conf( void )
 	EXTI_Init(&EXTI_InitStructure);
     
     //¼ÓËÙ¶È¼ÆÖÐ¶Ï£¬ÉÏÉýÑØÖÐ¶Ï
-//	EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
-//	EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Rising;
-//	EXTI_InitStructure.EXTI_Line = EXTI_Line0;
-//	EXTI_InitStructure.EXTI_LineCmd = ENABLE;
-//	EXTI_Init(&EXTI_InitStructure);
+	EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
+	EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Falling;
+	EXTI_InitStructure.EXTI_Line = EXTI_Line8;
+	EXTI_InitStructure.EXTI_LineCmd = ENABLE;
+	EXTI_Init(&EXTI_InitStructure);
 
 //	//³¬Éù²¨²â¾àÖÐ¶Ï£¬Ë«±ßÑØÖÐ¶Ï
 //	//ºìÍâÐÅºÅ½ÓÊÕË«±ßÑØÖÐ¶Ï
@@ -852,7 +856,7 @@ void TIM6_IRQHandler(void)
 //			Uart2_SendEn = ENABLE;
             Vocie_DealEn = 1;
             
-            vl53l0x_Mesure_En = 1; 
+//            vl53l0x_Mesure_En = 1; 
 		}
 
 		if(++Cnt3 >= UART_Send_Fq)

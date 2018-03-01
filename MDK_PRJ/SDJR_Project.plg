@@ -7,30 +7,3 @@ E:\项目资料\SDJR\02.Code\SDJR_Soft_For Driver V2.0\V3.04_1212 for Driver2.0 - Gi
 Project File Date:  02/26/2018
 
 <h2>Output:</h2>
-Build target 'SDJR_Project'
-linking...
-Program Size: Code=75826 RO-data=770 RW-data=4104 ZI-data=5536  
-FromELF: creating hex file...
-".\SDJR_Project.axf" - 0 Errors, 0 Warning(s).
-Load "E:\\项目资料\\SDJR\\02.Code\\SDJR_Soft_For Driver V2.0\\V3.04_1212 for Driver2.0 - Git\\MDK_PRJ\\SDJR_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-Build target 'SDJR_Project'
-compiling Init.c...
-..\USER\src\Init.c(66): warning:  #550-D: variable "CpuID" was set but never used
-linking...
-Program Size: Code=75826 RO-data=770 RW-data=4104 ZI-data=5536  
-FromELF: creating hex file...
-".\SDJR_Project.axf" - 0 Errors, 1 Warning(s).
-Load "E:\\项目资料\\SDJR\\02.Code\\SDJR_Soft_For Driver V2.0\\V3.04_1212 for Driver2.0 - Git\\MDK_PRJ\\SDJR_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-Build target 'SDJR_Project'
-linking...
-Program Size: Code=75826 RO-data=770 RW-data=4104 ZI-data=5536  
-FromELF: creating hex file...
-".\SDJR_Project.axf" - 0 Errors, 0 Warning(s).

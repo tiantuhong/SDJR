@@ -1704,7 +1704,7 @@ void CarpetCheck(void)
 {
     static uint8_t init = 0, earthmaxminOK = 0;
     static uint16_t RunningCnt = 0, EarthCheckPre = 0, AngleCnt = 0; //rightCurPre,leftCurPre, 
-    static int16_t Gyro_x_Bak;
+//    static int16_t Gyro_x_Bak;
     static int32_t AngleSum = 0;
     uint16_t anglexdelt;
     
@@ -2484,12 +2484,14 @@ void EXTI9_5_IRQHandler(void)
 	{
 		EXTI_ClearITPendingBit(EXTI_Line8);	
         
-        if(SystePwrMode)
-        {
-            __set_FAULTMASK(1);// ??????
-            NVIC_SystemReset();// ??
-            Device_Init();
-        }
+//        if(SystePwrMode)
+//        {
+//            __set_FAULTMASK(1);// ??????
+//            NVIC_SystemReset();// ??
+//            Device_Init();
+//        }
+//        VL53L0X_IRQ();  
+        vl53l0x_Mesure_En = 1; 
     }
     
     if ( EXTI_GetITStatus(EXTI_Line9) != RESET )
