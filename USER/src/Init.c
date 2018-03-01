@@ -134,7 +134,7 @@ void Device_Init( void )
     
     HandshakeInit();
     
-   vl53l0x_Mesure_En = 1; 
+//   vl53l0x_Mesure_En = 1; 
 
 	SystemRunTime = 0;
     SystePwrMode = 0;
@@ -856,7 +856,7 @@ void TIM6_IRQHandler(void)
 //			Uart2_SendEn = ENABLE;
             Vocie_DealEn = 1;
             
-//            vl53l0x_Mesure_En = 1; 
+            vl53l0x_init_En = 1; 
 		}
 
 		if(++Cnt3 >= UART_Send_Fq)

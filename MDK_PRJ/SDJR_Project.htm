@@ -3,9 +3,9 @@
 <title>Static Call Graph - [.\SDJR_Project.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\SDJR_Project.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Wed Feb 28 16:55:31 2018
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Thu Mar 01 10:00:54 2018
 <BR><P>
-<H3>Maximum Stack Usage =        908 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        916 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
 __rt_entry_main &rArr; main &rArr; vl53l0x_test &rArr; vl53l0x_Init &rArr; VL53L0X_StaticInit &rArr; VL53L0X_perform_ref_spad_management &rArr; perform_ref_signal_measurement &rArr; VL53L0X_PerformSingleRangingMeasurement &rArr; VL53L0X_GetRangingMeasurementData &rArr; VL53L0X_get_pal_range_status &rArr; VL53L0X_calc_sigma_estimate &rArr; VL53L0X_calc_dmax
 <P>
@@ -225,7 +225,7 @@ Global Symbols
 <P><STRONG><a name="[22b]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000009))
 
 <P><STRONG><a name="[55]"></a>__rt_entry_main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000D))
-<BR><BR>[Stack]<UL><LI>Max Depth = 908 + Unknown Stack Size
+<BR><BR>[Stack]<UL><LI>Max Depth = 916 + Unknown Stack Size
 <LI>Call Chain = __rt_entry_main &rArr; main &rArr; vl53l0x_test &rArr; vl53l0x_Init &rArr; VL53L0X_StaticInit &rArr; VL53L0X_perform_ref_spad_management &rArr; perform_ref_signal_measurement &rArr; VL53L0X_PerformSingleRangingMeasurement &rArr; VL53L0X_GetRangingMeasurementData &rArr; VL53L0X_get_pal_range_status &rArr; VL53L0X_calc_sigma_estimate &rArr; VL53L0X_calc_dmax
 </UL>
 <BR>[Calls]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -316,8 +316,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vl53l0x_test
 </UL>
 
-<P><STRONG><a name="[72]"></a>vl53l0x_test</STRONG> (Thumb, 86 bytes, Stack size 8 bytes, vl53l0x_continuousranging_example.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 908<LI>Call Chain = vl53l0x_test &rArr; vl53l0x_Init &rArr; VL53L0X_StaticInit &rArr; VL53L0X_perform_ref_spad_management &rArr; perform_ref_signal_measurement &rArr; VL53L0X_PerformSingleRangingMeasurement &rArr; VL53L0X_GetRangingMeasurementData &rArr; VL53L0X_get_pal_range_status &rArr; VL53L0X_calc_sigma_estimate &rArr; VL53L0X_calc_dmax
+<P><STRONG><a name="[72]"></a>vl53l0x_test</STRONG> (Thumb, 104 bytes, Stack size 16 bytes, vl53l0x_continuousranging_example.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 916<LI>Call Chain = vl53l0x_test &rArr; vl53l0x_Init &rArr; VL53L0X_StaticInit &rArr; VL53L0X_perform_ref_spad_management &rArr; perform_ref_signal_measurement &rArr; VL53L0X_PerformSingleRangingMeasurement &rArr; VL53L0X_GetRangingMeasurementData &rArr; VL53L0X_get_pal_range_status &rArr; VL53L0X_calc_sigma_estimate &rArr; VL53L0X_calc_dmax
 </UL>
 <BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;VL53L0X_PollingDelay
 <LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;VL53L0X_GetRangingMeasurementData
@@ -334,7 +334,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[56]"></a>main</STRONG> (Thumb, 108 bytes, Stack size 0 bytes, main.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 908<LI>Call Chain = main &rArr; vl53l0x_test &rArr; vl53l0x_Init &rArr; VL53L0X_StaticInit &rArr; VL53L0X_perform_ref_spad_management &rArr; perform_ref_signal_measurement &rArr; VL53L0X_PerformSingleRangingMeasurement &rArr; VL53L0X_GetRangingMeasurementData &rArr; VL53L0X_get_pal_range_status &rArr; VL53L0X_calc_sigma_estimate &rArr; VL53L0X_calc_dmax
+<BR><BR>[Stack]<UL><LI>Max Depth = 916<LI>Call Chain = main &rArr; vl53l0x_test &rArr; vl53l0x_Init &rArr; VL53L0X_StaticInit &rArr; VL53L0X_perform_ref_spad_management &rArr; perform_ref_signal_measurement &rArr; VL53L0X_PerformSingleRangingMeasurement &rArr; VL53L0X_GetRangingMeasurementData &rArr; VL53L0X_get_pal_range_status &rArr; VL53L0X_calc_sigma_estimate &rArr; VL53L0X_calc_dmax
 </UL>
 <BR>[Calls]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handshakepresec
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Ultra_Check
@@ -481,7 +481,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Device_Init
 </UL>
 
-<P><STRONG><a name="[74]"></a>Device_Init</STRONG> (Thumb, 126 bytes, Stack size 8 bytes, init.o(.text))
+<P><STRONG><a name="[74]"></a>Device_Init</STRONG> (Thumb, 120 bytes, Stack size 8 bytes, init.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 100<LI>Call Chain = Device_Init &rArr; UART_Conf &rArr; USART_Init &rArr; RCC_GetClocksFreq
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Conf
@@ -535,7 +535,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
 </UL>
-<P><STRONG><a name="[43]"></a>TIM6_IRQHandler</STRONG> (Thumb, 530 bytes, Stack size 8 bytes, init.o(.text))
+<P><STRONG><a name="[43]"></a>TIM6_IRQHandler</STRONG> (Thumb, 534 bytes, Stack size 8 bytes, init.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = TIM6_IRQHandler &rArr; TIM_GetITStatus
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UartTimerJudge
@@ -781,7 +781,7 @@ Global Symbols
 <LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RightMotorStop
 </UL>
 
-<P><STRONG><a name="[83]"></a>CarpetCheck</STRONG> (Thumb, 920 bytes, Stack size 8 bytes, robit_run.o(.text))
+<P><STRONG><a name="[83]"></a>CarpetCheck</STRONG> (Thumb, 916 bytes, Stack size 8 bytes, robit_run.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = CarpetCheck
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CalAngleDif
@@ -789,7 +789,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[230]"></a>EdageRunAngle</STRONG> (Thumb, 538 bytes, Stack size 12 bytes, robit_run.o(.text), UNUSED)
+<P><STRONG><a name="[230]"></a>EdageRunAngle</STRONG> (Thumb, 534 bytes, Stack size 12 bytes, robit_run.o(.text), UNUSED)
 
 <P><STRONG><a name="[29]"></a>TIM2_IRQHandler</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, robit_run.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = TIM2_IRQHandler &rArr; TIM_GetITStatus
@@ -868,7 +868,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
 </UL>
-<P><STRONG><a name="[76]"></a>UART2_SendData</STRONG> (Thumb, 602 bytes, Stack size 16 bytes, uart.o(.text))
+<P><STRONG><a name="[76]"></a>UART2_SendData</STRONG> (Thumb, 596 bytes, Stack size 16 bytes, uart.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = UART2_SendData &rArr; Uart2_Send_Start
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart2_Send_Start
@@ -883,7 +883,7 @@ Global Symbols
 <LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_ResponseMaster
 </UL>
 
-<P><STRONG><a name="[75]"></a>UART_ResponseMaster</STRONG> (Thumb, 1196 bytes, Stack size 64 bytes, uart.o(.text))
+<P><STRONG><a name="[75]"></a>UART_ResponseMaster</STRONG> (Thumb, 1194 bytes, Stack size 64 bytes, uart.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = UART_ResponseMaster &rArr; CalOdoAngularVelocity &rArr; __aeabi_dmul
 </UL>
 <BR>[Calls]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;add
@@ -1471,7 +1471,7 @@ Global Symbols
 <LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CloseToWall2
 </UL>
 
-<P><STRONG><a name="[135]"></a>CloseToWall2</STRONG> (Thumb, 1824 bytes, Stack size 8 bytes, pathplan.o(.text))
+<P><STRONG><a name="[135]"></a>CloseToWall2</STRONG> (Thumb, 1810 bytes, Stack size 8 bytes, pathplan.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = CloseToWall2 &rArr; SetRobitAngleRun &rArr; Angle2Mileage &rArr; __aeabi_dmul
 </UL>
 <BR>[Calls]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetRobitVacc
@@ -1485,7 +1485,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PathPlan
 </UL>
 
-<P><STRONG><a name="[8a]"></a>PathPlan</STRONG> (Thumb, 2940 bytes, Stack size 24 bytes, pathplan.o(.text))
+<P><STRONG><a name="[8a]"></a>PathPlan</STRONG> (Thumb, 2938 bytes, Stack size 24 bytes, pathplan.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = PathPlan &rArr; BowShapeClean &rArr; SetRobitAngleRun &rArr; Angle2Mileage &rArr; __aeabi_dmul
 </UL>
 <BR>[Calls]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetRobitAngleRun

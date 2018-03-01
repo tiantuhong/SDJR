@@ -1805,7 +1805,7 @@ void CloseToWall2(void)
     static uint16_t SmallDis = 0, EscapeWallDistane = PSD_WALL_DIS_MAX;
 
     PSD_Trend = DataTrendCal(PSD_Distance);
-    test1 = PSD_Trend;
+//    test1 = PSD_Trend;
     switch(PathPlanStep)
     {
         case 0:

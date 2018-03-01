@@ -545,11 +545,11 @@ void UART2_SendData(void)
         
         SendBufPtr->Data[0] = vl53l0x_Results >> 8;
         SendBufPtr->Data[1] = vl53l0x_Results;
-        SendBufPtr->Data[2] = PathPlanStep;
-        SendBufPtr->Data[3] = RobitRunbyRouteMode;
-        SendBufPtr->Data[4] = LeftBump; 
-        SendBufPtr->Data[5] = RightBump;
-        SendBufPtr->Data[6] = RightMotor.CurSpeed >> 8;
+        SendBufPtr->Data[2] = test1 >> 8;
+        SendBufPtr->Data[3] = test1;
+        SendBufPtr->Data[4] = test2 >> 8; 
+        SendBufPtr->Data[5] = test2;
+        SendBufPtr->Data[6] = I2C_Status;
         SendBufPtr->Data[7] = RightMotor.CurSpeed;
         SendBufPtr->Data[8] = LeftMotor.CurSpeed >> 8;
         SendBufPtr->Data[9] = LeftMotor.CurSpeed;

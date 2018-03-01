@@ -1834,7 +1834,7 @@ void CarpetCheck(void)
     }
     
     anglexdelt = CalAngleDif(Sys_Angle2, Sys_AnglexInit);
-    test2 = anglexdelt;
+//    test2 = anglexdelt;
     
     //x轴角度小于初始值 120 认为上坡动作 ANGLE_X_THRESHOLD = 120
     if(anglexdelt > 18000 && anglexdelt < 36000 - ANGLE_X_THRESHOLD && Sta_Gyro)

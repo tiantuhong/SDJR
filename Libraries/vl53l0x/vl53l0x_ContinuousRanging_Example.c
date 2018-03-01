@@ -11,7 +11,7 @@ VL53L0X_Dev_t *pMyDevice = &MyDevice;
 VL53L0X_RangingMeasurementData_t    RangingMeasurementData;
 VL53L0X_RangingMeasurementData_t   *pRangingMeasurementData    = &RangingMeasurementData;
 uint16_t vl53l0x_Results;
-uint8_t vl53l0x_Mesure_En = 0;
+uint8_t vl53l0x_Mesure_En = 0 ,vl53l0x_init_En = 0;
 
 void print_pal_error(VL53L0X_Error Status){
     char buf[VL53L0X_MAX_STRING_LENGTH];
@@ -253,22 +253,32 @@ void vl53l0x_test(void)
 {
     
     static uint8_t init = 0;
+    
     VL53L0X_Error Status = VL53L0X_ERROR_NONE;
     
-    //定时30ms
-    if(!vl53l0x_Mesure_En)
+    //延时50ms进行设备的初始化，上电立即初始化会出现I2C读取不成功
+    //vl53l0x_init_En在定时器中被置1，并且此后不再清零
+    if(!vl53l0x_init_En)
         return;
-    vl53l0x_Mesure_En = 0;
     
+       
     if(!init)
     {
-        if(vl53l0x_Init() == VL53L0X_ERROR_NONE)
+        VL53L0X_Error Init_Status;
+        
+        // VL53L0X设备初始化，若返回值正确，则初始化成功
+        Init_Status = vl53l0x_Init();
+        test1 = Init_Status;
+        if(Init_Status == VL53L0X_ERROR_NONE)
             init = 1;
         return;
     }
     
     
-    
+    //VL53L0X的 中断中会将vl53l0x_Mesure_En置1
+    if(!vl53l0x_Mesure_En)
+        return;
+    vl53l0x_Mesure_En = 0;
 
     
  //   Status = WaitMeasurementDataReady(pMyDevice);
@@ -276,7 +286,7 @@ void vl53l0x_test(void)
     if(Status == VL53L0X_ERROR_NONE)
     {
         Status = VL53L0X_GetRangingMeasurementData(pMyDevice, pRangingMeasurementData);
-
+        test2 = Status;
         vl53l0x_Results = pRangingMeasurementData->RangeMilliMeter;
 
         // Clear the interrupt
@@ -285,7 +295,7 @@ void vl53l0x_test(void)
     } 
     else 
     {
-
+        
     }
 }
 
