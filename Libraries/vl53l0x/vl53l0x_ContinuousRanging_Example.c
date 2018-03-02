@@ -261,14 +261,22 @@ void vl53l0x_test(void)
     if(!vl53l0x_init_En)
         return;
     
-       
+    //若I2C正在被占用则退出等待空闲时进入
+    if(I2C_Status)
+        return;
+    
+    if(I2C_Req)
+        return;
+    
+    I2C_ReqLock = 1; 
+    
     if(!init)
     {
         VL53L0X_Error Init_Status;
         
         // VL53L0X设备初始化，若返回值正确，则初始化成功
         Init_Status = vl53l0x_Init();
-        test1 = Init_Status;
+
         if(Init_Status == VL53L0X_ERROR_NONE)
             init = 1;
         return;
@@ -283,10 +291,11 @@ void vl53l0x_test(void)
     
  //   Status = WaitMeasurementDataReady(pMyDevice);
 
+    
+    Status = VL53L0X_GetRangingMeasurementData(pMyDevice, pRangingMeasurementData);
+//    test2 = Status;
     if(Status == VL53L0X_ERROR_NONE)
     {
-        Status = VL53L0X_GetRangingMeasurementData(pMyDevice, pRangingMeasurementData);
-        test2 = Status;
         vl53l0x_Results = pRangingMeasurementData->RangeMilliMeter;
 
         // Clear the interrupt
@@ -295,19 +304,9 @@ void vl53l0x_test(void)
     } 
     else 
     {
-        
+        vl53l0x_Mesure_En = 1;
     }
+    I2C_ReqLock = 0;
 }
 
-void VL53L0X_IRQ(void)
-{
-//    VL53L0X_Error Status = VL53L0X_ERROR_NONE;
-    
-    VL53L0X_GetRangingMeasurementData(pMyDevice, pRangingMeasurementData);
 
-    vl53l0x_Results = pRangingMeasurementData->RangeMilliMeter;
-
-    // Clear the interrupt
-    VL53L0X_ClearInterruptMask(pMyDevice, VL53L0X_REG_SYSTEM_INTERRUPT_GPIO_NEW_SAMPLE_READY);
-    VL53L0X_PollingDelay(pMyDevice);
-}

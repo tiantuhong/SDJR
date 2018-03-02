@@ -185,7 +185,7 @@ static void NonlinearSO3AHRSupdate(float gx, float gy, float gz, float ax, float
 	}
     
     
-    test3 = (int16_t)(gz * 32678);
+//    test3 = (int16_t)(gz * 32678);
 	// Apply feedback only when valid data has been gathered from the accelerometer or magnetometer
 //	if(halfex != 0.0f && halfey != 0.0f && halfez != 0.0f) {
     if(halfex != 0.0f || halfey != 0.0f || halfez != 0.0f) {

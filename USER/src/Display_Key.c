@@ -396,7 +396,7 @@ void Key_Deal(void)
 //                RemoteSet(sig_reset_wifi);
                 if(PathPlanMode == 0)
                 {
-                    PathPlanMode = 4;
+//                    PathPlanMode = 3;
                     PathPlanStep = 0;
                     SubStep = 0;
                     UltraFrontDisMin = 0xffff;
@@ -420,47 +420,47 @@ void Key_Deal(void)
                     //关闭拖地
                     MopPar.MopEn = DISABLE;                    
                 }
-                if(MopPar.MopEn)
-                {
-                    PathPlanStep = 0;
-                    UltraFrontDisMin = 0xffff;
-                    EndPosGet = DISABLE;
-                    
-                    //拖地开启
-                    MopPar.MopEn = ENABLE;
-                    
-                    //清扫开启
-                    CleanEn = ENABLE;
-                    
-                    //吸尘开启
-                    DustEn = ENABLE;
-                    
-                    VoiceReq = 1;
-                }
-                else
-                {
-                    PathPlanMode = 0;
-                    PathPlanStep = 0;
-                    SetRobitSpeed(0, 0);
-                    
-                    //关闭清扫
-                    CleanEn = DISABLE;
-                    
-                    //关闭吸尘
-                    DustEn = DISABLE;
-                    
-                    //关闭拖地
-                    RagChangeEn = DISABLE;
+//                if(MopPar.MopEn)
+//                {
+//                    PathPlanStep = 0;
+//                    UltraFrontDisMin = 0xffff;
+//                    EndPosGet = DISABLE;
+//                    
+//                    //拖地开启
+//                    MopPar.MopEn = ENABLE;
+//                    
+//                    //清扫开启
+//                    CleanEn = ENABLE;
+//                    
+//                    //吸尘开启
+//                    DustEn = ENABLE;
+//                    
+//                    VoiceReq = 1;
+//                }
+//                else
+//                {
+//                    PathPlanMode = 0;
+//                    PathPlanStep = 0;
+//                    SetRobitSpeed(0, 0);
+//                    
+//                    //关闭清扫
+//                    CleanEn = DISABLE;
+//                    
+//                    //关闭吸尘
+//                    DustEn = DISABLE;
+//                    
+//                    //关闭拖地
+//                    RagChangeEn = DISABLE;
 
-                    
-                    //关闭滴水
-                    SprayWaterEn = DISABLE;
-                    
-                    //关闭拖地
-                    MopPar.MopEn = DISABLE;
-                    
-                    VoiceReq = 2;   
-                }
+//                    
+//                    //关闭滴水
+//                    SprayWaterEn = DISABLE;
+//                    
+//                    //关闭拖地
+//                    MopPar.MopEn = DISABLE;
+//                    
+//                    VoiceReq = 2;   
+//                }
             }
 		default:
 			break;

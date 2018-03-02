@@ -31,7 +31,7 @@ int main(void)
         Ultra_Check();
         PathPlan();
         
-//        ICM_Init();
+        ICM_Init();
         Gyro_Calibration();
 //        ChargeManageInit();
         vl53l0x_test();

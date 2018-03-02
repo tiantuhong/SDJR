@@ -533,6 +533,9 @@ void UART2_SendData(void)
 //    }
 //    else
     {
+        I2CData_TypeDef * i2c_device;
+        
+        i2c_device = I2C_Core;
         SendBufPtr = (T_UART2_SendFarme*)UART2_SendBuf;
         SendBufPtr->SOI = 0xAA;
         SendBufPtr->CMD = 0x01;//VoiceCur.Cmd;
@@ -550,11 +553,11 @@ void UART2_SendData(void)
         SendBufPtr->Data[4] = test2 >> 8; 
         SendBufPtr->Data[5] = test2;
         SendBufPtr->Data[6] = I2C_Status;
-        SendBufPtr->Data[7] = RightMotor.CurSpeed;
-        SendBufPtr->Data[8] = LeftMotor.CurSpeed >> 8;
-        SendBufPtr->Data[9] = LeftMotor.CurSpeed;
-        SendBufPtr->Data[10] = Sys_AnglexInit >> 8;
-        SendBufPtr->Data[11] = Sys_AnglexInit;
+        SendBufPtr->Data[7] = test3;
+        SendBufPtr->Data[8] = IIcRevBytes;
+        SendBufPtr->Data[9] = i2c_device->I2C_Device ;
+        SendBufPtr->Data[10] = i2c_device->I2C_RevBytes ;
+        SendBufPtr->Data[11] = i2c_device->I2C_Dir ;
         SendBufPtr->Data[12] = earthWaveMin >> 8;
         SendBufPtr->Data[13] = earthWaveMin >> 0;
         SendBufPtr->Data[14] = earthWaveMax >> 8;

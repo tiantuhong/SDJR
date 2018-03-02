@@ -79,8 +79,8 @@ extern uint8_t AccBuf[6];
 extern uint8_t Battery_Charge_En;
 extern uint16_t Icm_Init_Cnt;
 extern Gyro_6Axis_TypeDef IcmDataByKalman;
-extern uint8_t I2C_Status ;
-extern I2CData_TypeDef I2C_VL53L0X;
+extern uint8_t I2C_Status, I2C_Req, I2C_ReqLock, IIcRevBytes;
+extern I2CData_TypeDef I2C_VL53L0X, *I2C_Core ;
 
 extern void IIC_Test(void);
 extern void Gyro_Conf(void);

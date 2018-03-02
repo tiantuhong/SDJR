@@ -25,6 +25,8 @@
 #include "imu.h"
 #include "IMUSO3.h"
 #include <string.h>
+
+#define I2C_DEVICE_NUM      6
 /*----------------------------------------------*
  * 外部变量说明                                 *
  *----------------------------------------------*/
@@ -73,7 +75,7 @@ uint8_t Battery_Charge_En;
  *----------------------------------------------*/
 FunctionalState GyroInitEn, ADXLInitEn, I2CFrameTrans, GyroIcmInit, BatteryChargeInit;
 
-uint8_t /*I2C_SendBuf[10], I2C_SendBytes, */I2C_SendPts, I2C_ReqDevice[6]/*, I2C_Dir, I2C_RevBytes*/;
+uint8_t /*I2C_SendBuf[10], I2C_SendBytes, */I2C_SendPts, I2C_ReqDevice[I2C_DEVICE_NUM], I2C_ReqDeviceLockedBak[I2C_DEVICE_NUM];/*, I2C_Dir, I2C_RevBytes*/;
 I2CData_TypeDef I2C_Gyro, I2C_ADXL, I2C_Gyro_Icm, I2C_Charge, I2C_VL53L0X, * I2C_Core /*, * I2C_Lock*/;
 uint8_t I2C_Status = 0,I2C_Req = 0, I2C_ReqLock = 0,I2C_ReqLocked = 0;// I2C状态 0-空闲 1-正在使用 ， I2C 请求 0-无请求 1-有请求
 uint8_t AccBuf[6] = {0};
@@ -95,6 +97,7 @@ kalman1_state GyroKalman[6];
 #define I2C_DIR_READ        1
 #define I2C_DIR_RW          2
 #define ADXL345_ADDR        0xA6
+
 /*****************************************************************************
  函 数 名  : Gyro_Conf
  功能描述  : 与陀螺仪模块IIC通讯方式，陀螺仪模块从机模式，本模块主机模式，通
@@ -390,11 +393,7 @@ void I2C_Deal(void)
         default:
             break;
     }
-    
-    I2C_Req--;
-    I2C_SendPts = 0;
-    I2C_ReqLock = 0;
-    
+//    test1++;
     ///I2C_ReqLock 参数说明：
     ///用于保护I2C_ReqLock = 1 时的代码，若这段代码之间有中断发起了I2C请求，需要另外处理
     
@@ -402,15 +401,27 @@ void I2C_Deal(void)
     ///I2C请求设备名会单独保存在I2C_ReqDevice[0]中，在此处处理，处理完成后I2C_ReqLocked = 0
     if(I2C_ReqLocked)
     {
-        I2C_Req++;
-        I2C_ReqDevice[I2C_Req] = I2C_ReqDevice[0];
-        I2C_ReqLocked = 0;
+        uint8_t i;
+//        I2C_Req++;
+//        I2C_ReqDevice[I2C_Req] = I2C_ReqDevice[0];
+//        I2C_ReqLocked = 0;
+        
+        if(I2C_Req + I2C_ReqLocked < I2C_DEVICE_NUM)
+        {
+            for(i=0; i<I2C_ReqLocked; i++)
+            {
+                I2C_ReqDevice[I2C_Req + i] = I2C_ReqDeviceLockedBak[i];
+            }
+            I2C_Req += I2C_ReqLocked;
+            I2C_ReqLocked = 0;
+        }
     }
     
-
+    I2C_SendPts = 0;
+    I2C_ReqLock = 0;
     I2C_GenerateSTART(I2C2, ENABLE);
     I2C_Status = 1;
-    
+    I2C_Req--;
     
 }
 
@@ -449,24 +460,7 @@ void EXTI3_IRQHandler(void)
 //        Test2_Sw;
         if(GyroIcmInit)
         {
-             
-//            I2C_Gyro.I2C_Dir = I2C_DIR_READ;
-//            I2C_Gyro.I2C_RevBytes = 4;
-//            I2C_Gyro.I2C_Device = I2C_DEVICE_GYRO;
-//            
-//            //若I2C_ReqLock =  1 需要单独保存请求设备名，因总共只有2个请求设备，所以只预留一个保存空间
-//            //并且I2C_ReqLocked = 1
-//            if(I2C_Req != 0 && I2C_ReqLock)
-//            {
-//                I2C_ReqLocked = 1;
-//                I2C_ReqDevice[0] = I2C_DEVICE_GYRO;
-//            }
-//            else
-//            {
-//                I2C_Req++;
-//                I2C_ReqDevice[I2C_Req] = I2C_DEVICE_GYRO;
-//            }
-            
+                        
             //20170828 - 陀螺仪改为6轴陀螺仪ICM20608D, GGPM01不使用
             Read_I2C(I2C_DEVICE_GYRO_ICM, ACCEL_XOUT_H, 14);
 //            Test2_Sw;
@@ -562,13 +556,22 @@ void Single_Write_I2C(uint8_t Device_Num, uint8_t REG_Address,uint8_t REG_data)
     //并且I2C_ReqLocked = 1
     if(I2C_Req != 0 && I2C_ReqLock)
     {
-        I2C_ReqLocked = 1;
-        I2C_ReqDevice[0] = Device_Num;
+//        I2C_ReqLocked = 1;
+//        I2C_ReqDevice[0] = Device_Num;
+        
+        if(I2C_ReqLocked < I2C_DEVICE_NUM)
+        {
+            I2C_ReqLocked++;
+            I2C_ReqDeviceLockedBak[I2C_ReqLocked] = Device_Num;
+        }
     }
     else
     {
-        I2C_Req++;
-        I2C_ReqDevice[I2C_Req] = Device_Num;
+        if(I2C_Req < I2C_DEVICE_NUM)
+        {
+            I2C_Req++;
+            I2C_ReqDevice[I2C_Req] = Device_Num;
+        }
     }
     
     
@@ -613,13 +616,21 @@ void Write_I2C(uint8_t Device_Num, uint8_t * REG_Data, uint8_t REG_Len)
     //并且I2C_ReqLocked = 1
     if(I2C_Req != 0 && I2C_ReqLock)
     {
-        I2C_ReqLocked = 1;
-        I2C_ReqDevice[0] = Device_Num;
+//        I2C_ReqLocked = 1;
+//        I2C_ReqDevice[0] = Device_Num;
+        if(I2C_ReqLocked < I2C_DEVICE_NUM)
+        {
+            I2C_ReqLocked++;
+            I2C_ReqDeviceLockedBak[I2C_ReqLocked] = Device_Num;
+        }
     }
     else
     {
-        I2C_Req++;
-        I2C_ReqDevice[I2C_Req] = Device_Num;
+        if(I2C_Req < I2C_DEVICE_NUM)
+        {
+            I2C_Req++;
+            I2C_ReqDevice[I2C_Req] = Device_Num;
+        }
     }
 }
 
@@ -657,13 +668,21 @@ void Read_I2C(uint8_t Device_Num, uint8_t REG_Address, uint8_t REG_ReadBytes)
     //并且I2C_ReqLocked = 1
     if(I2C_Req != 0 && I2C_ReqLock)
     {
-        I2C_ReqLocked = 1;
-        I2C_ReqDevice[0] = Device_Num;
+//        I2C_ReqLocked = 1;
+//        I2C_ReqDevice[0] = Device_Num;
+        if(I2C_ReqLocked < I2C_DEVICE_NUM)
+        {
+            I2C_ReqLocked++;
+            I2C_ReqDeviceLockedBak[I2C_ReqLocked] = Device_Num;
+        }
     }
     else
     {
-        I2C_Req++;
-        I2C_ReqDevice[I2C_Req] = Device_Num;
+        if(I2C_Req < I2C_DEVICE_NUM)
+        {
+            I2C_Req++;
+            I2C_ReqDevice[I2C_Req] = Device_Num;
+        }
     }
 }
 
@@ -700,13 +719,21 @@ void ReadOnly_I2C(uint8_t Device_Num, uint8_t *Rev_Reg, uint8_t REG_ReadBytes)
     //并且I2C_ReqLocked = 1
     if(I2C_Req != 0 && I2C_ReqLock)
     {
-        I2C_ReqLocked = 1;
-        I2C_ReqDevice[0] = Device_Num;
+//        I2C_ReqLocked = 1;
+//        I2C_ReqDevice[0] = Device_Num;
+        if(I2C_ReqLocked < I2C_DEVICE_NUM)
+        {
+            I2C_ReqLocked++;
+            I2C_ReqDeviceLockedBak[I2C_ReqLocked] = Device_Num;
+        }
     }
     else
     {
-        I2C_Req++;
-        I2C_ReqDevice[I2C_Req] = Device_Num;
+        if(I2C_Req < I2C_DEVICE_NUM)
+        {
+            I2C_Req++;
+            I2C_ReqDevice[I2C_Req] = Device_Num;
+        }
     }
 }
 
@@ -734,7 +761,7 @@ void I2C2_EV_IRQHandler(void)
 	{
 		//起始条件中断
 //		I2C_ClearITPendingBit(I2C2,I2C_IT_SB);
-        
+//        test3 = 1;
         
         if(I2C_Core->I2C_Dir == I2C_DIR_READ)
         {
@@ -784,7 +811,10 @@ void I2C2_EV_IRQHandler(void)
                 default:
                     break;
             }
+           
         }
+//        test3 = I2C_Core->I2C_Device;
+//        test1 = 0;
 	}
 
 	if(I2C_GetITStatus(I2C2,I2C_IT_ADDR) != RESET)
@@ -796,6 +826,7 @@ void I2C2_EV_IRQHandler(void)
         {
             I2C_AcknowledgeConfig(I2C2, DISABLE);	
 			I2C_GenerateSTOP(I2C2, ENABLE);
+
         }
 		
 	}
@@ -936,6 +967,7 @@ void I2C2_EV_IRQHandler(void)
 			{
 				I2C_AcknowledgeConfig(I2C2, DISABLE);	
 				I2C_GenerateSTOP(I2C2, ENABLE);
+
 			}
 		}
 	}
@@ -962,7 +994,7 @@ void I2C2_EV_IRQHandler(void)
             }
             else
             {
-                I2C_Status = 0;
+
             }
 
         }
@@ -976,11 +1008,11 @@ void I2C2_EV_IRQHandler(void)
             I2C_GenerateSTOP(I2C2, ENABLE);
             I2CFrameTrans = ENABLE; 
             
-            I2C_Status = 0;       
+            I2C_Status = 0;    
         }
         else if(I2C_Core->I2C_Dir == I2C_DIR_READ)
         {
-//            Test2_Sw;
+
         }
         else if(I2C_Core->I2C_Dir == I2C_DIR_RW)
         {

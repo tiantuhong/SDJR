@@ -28,13 +28,13 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
 I (..\USER\inc\handshake.h)(0x595C8921)
 I (..\Libraries\vl53l0x\vl53l0x.h)(0x5A975A24)
-F (..\Libraries\vl53l0x\vl53l0x_ContinuousRanging_Example.c)(0x5A975ED5)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\USER\inc -I ..\USER\src -I ..\README -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32F10x_StdPeriph_Driver\src -I ..\Libraries\vl53l0x-I.\RTE\_SDJR_Project-I"D:\Program Files\Keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Program Files\Keil5\ARM\PACK\Keil\STM32F1xx_DFP\1.1.0\Device\Include"-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD-o .\vl53l0x_continuousranging_example.o --depend .\vl53l0x_continuousranging_example.d)
+F (..\Libraries\vl53l0x\vl53l0x_ContinuousRanging_Example.c)(0x5A98EC79)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\USER\inc -I ..\USER\src -I ..\README -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32F10x_StdPeriph_Driver\src -I ..\Libraries\vl53l0x-I.\RTE\_SDJR_Project-I"D:\Program Files\Keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Program Files\Keil5\ARM\PACK\Keil\STM32F1xx_DFP\1.1.0\Device\Include"-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD-o .\vl53l0x_continuousranging_example.o --depend .\vl53l0x_continuousranging_example.d)
 I (..\Libraries\vl53l0x\vl53l0x_api.h)(0x57FB7C70)
 I (..\Libraries\vl53l0x\vl53l0x_api_strings.h)(0x57FB7C70)
 I (..\Libraries\vl53l0x\vl53l0x_def.h)(0x5A92755B)
@@ -71,13 +71,13 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
 I (..\USER\inc\handshake.h)(0x595C8921)
 I (..\Libraries\vl53l0x\vl53l0x.h)(0x5A975A24)
-F (..\USER\src\main.c)(0x5A93B216)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\USER\inc -I ..\USER\src -I ..\README -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32F10x_StdPeriph_Driver\src -I ..\Libraries\vl53l0x-I.\RTE\_SDJR_Project-I"D:\Program Files\Keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Program Files\Keil5\ARM\PACK\Keil\STM32F1xx_DFP\1.1.0\Device\Include"-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD-o .\main.o --depend .\main.d)
+F (..\USER\src\main.c)(0x5A98AC61)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\USER\inc -I ..\USER\src -I ..\README -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32F10x_StdPeriph_Driver\src -I ..\Libraries\vl53l0x-I.\RTE\_SDJR_Project-I"D:\Program Files\Keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Program Files\Keil5\ARM\PACK\Keil\STM32F1xx_DFP\1.1.0\Device\Include"-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD-o .\main.o --depend .\main.d)
 I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x.h)(0x582968B0)
 I (D:\Program Files\Keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm3.h)(0x5898498A)
 I (D:\Program Files\Keil5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
@@ -104,7 +104,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -137,7 +137,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -172,7 +172,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -205,7 +205,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -213,7 +213,7 @@ I (..\USER\inc\handshake.h)(0x595C8921)
 I (..\Libraries\vl53l0x\vl53l0x.h)(0x5A975A24)
 I (D:\Program Files\Keil5\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (D:\Program Files\Keil5\ARM\ARMCC\include\math.h)(0x57F606B6)
-F (..\USER\src\UART.c)(0x5A9757F1)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\USER\inc -I ..\USER\src -I ..\README -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32F10x_StdPeriph_Driver\src -I ..\Libraries\vl53l0x-I.\RTE\_SDJR_Project-I"D:\Program Files\Keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Program Files\Keil5\ARM\PACK\Keil\STM32F1xx_DFP\1.1.0\Device\Include"-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD-o .\uart.o --depend .\uart.d)
+F (..\USER\src\UART.c)(0x5A98E45E)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\USER\inc -I ..\USER\src -I ..\README -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32F10x_StdPeriph_Driver\src -I ..\Libraries\vl53l0x-I.\RTE\_SDJR_Project-I"D:\Program Files\Keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Program Files\Keil5\ARM\PACK\Keil\STM32F1xx_DFP\1.1.0\Device\Include"-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD-o .\uart.o --depend .\uart.d)
 I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x.h)(0x582968B0)
 I (D:\Program Files\Keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm3.h)(0x5898498A)
 I (D:\Program Files\Keil5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
@@ -240,7 +240,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -276,13 +276,13 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
 I (..\USER\inc\handshake.h)(0x595C8921)
 I (..\Libraries\vl53l0x\vl53l0x.h)(0x5A975A24)
-F (..\USER\src\Display_Key.c)(0x5A976BB7)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\USER\inc -I ..\USER\src -I ..\README -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32F10x_StdPeriph_Driver\src -I ..\Libraries\vl53l0x-I.\RTE\_SDJR_Project-I"D:\Program Files\Keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Program Files\Keil5\ARM\PACK\Keil\STM32F1xx_DFP\1.1.0\Device\Include"-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD-o .\display_key.o --depend .\display_key.d)
+F (..\USER\src\Display_Key.c)(0x5A989F96)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\USER\inc -I ..\USER\src -I ..\README -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32F10x_StdPeriph_Driver\src -I ..\Libraries\vl53l0x-I.\RTE\_SDJR_Project-I"D:\Program Files\Keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Program Files\Keil5\ARM\PACK\Keil\STM32F1xx_DFP\1.1.0\Device\Include"-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD-o .\display_key.o --depend .\display_key.d)
 I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x.h)(0x582968B0)
 I (D:\Program Files\Keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm3.h)(0x5898498A)
 I (D:\Program Files\Keil5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
@@ -309,7 +309,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -342,7 +342,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -375,7 +375,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -409,13 +409,13 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
 I (..\USER\inc\handshake.h)(0x595C8921)
 I (..\Libraries\vl53l0x\vl53l0x.h)(0x5A975A24)
-F (..\USER\src\Gyro_I2C.c)(0x5A9278C7)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\USER\inc -I ..\USER\src -I ..\README -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32F10x_StdPeriph_Driver\src -I ..\Libraries\vl53l0x-I.\RTE\_SDJR_Project-I"D:\Program Files\Keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Program Files\Keil5\ARM\PACK\Keil\STM32F1xx_DFP\1.1.0\Device\Include"-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD-o .\gyro_i2c.o --depend .\gyro_i2c.d)
+F (..\USER\src\Gyro_I2C.c)(0x5A98EC79)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\USER\inc -I ..\USER\src -I ..\README -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32F10x_StdPeriph_Driver\src -I ..\Libraries\vl53l0x-I.\RTE\_SDJR_Project-I"D:\Program Files\Keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Program Files\Keil5\ARM\PACK\Keil\STM32F1xx_DFP\1.1.0\Device\Include"-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD-o .\gyro_i2c.o --depend .\gyro_i2c.d)
 I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x.h)(0x582968B0)
 I (D:\Program Files\Keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm3.h)(0x5898498A)
 I (D:\Program Files\Keil5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
@@ -442,7 +442,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -480,7 +480,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -513,7 +513,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -546,7 +546,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -580,7 +580,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -615,7 +615,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -624,7 +624,7 @@ I (..\Libraries\vl53l0x\vl53l0x.h)(0x5A975A24)
 I (..\USER\inc\imu.h)(0x59AFB55B)
 I (D:\Program Files\Keil5\ARM\ARMCC\include\math.h)(0x57F606B6)
 I (..\USER\inc\filterLPC.h)(0x5665A442)
-F (..\USER\src\IMUSO3.c)(0x59E81534)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\USER\inc -I ..\USER\src -I ..\README -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32F10x_StdPeriph_Driver\src -I ..\Libraries\vl53l0x-I.\RTE\_SDJR_Project-I"D:\Program Files\Keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Program Files\Keil5\ARM\PACK\Keil\STM32F1xx_DFP\1.1.0\Device\Include"-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD-o .\imuso3.o --depend .\imuso3.d)
+F (..\USER\src\IMUSO3.c)(0x5A98C6F9)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\USER\inc -I ..\USER\src -I ..\README -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32F10x_StdPeriph_Driver\src -I ..\Libraries\vl53l0x-I.\RTE\_SDJR_Project-I"D:\Program Files\Keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Program Files\Keil5\ARM\PACK\Keil\STM32F1xx_DFP\1.1.0\Device\Include"-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD-o .\imuso3.o --depend .\imuso3.d)
 I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x.h)(0x582968B0)
 I (D:\Program Files\Keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm3.h)(0x5898498A)
 I (D:\Program Files\Keil5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
@@ -651,7 +651,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -687,7 +687,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -725,7 +725,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -758,7 +758,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -792,7 +792,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -826,7 +826,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -860,7 +860,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -894,7 +894,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -928,7 +928,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -962,7 +962,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -995,7 +995,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -1028,7 +1028,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -1062,7 +1062,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -1096,7 +1096,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -1129,7 +1129,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -1162,7 +1162,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -1196,7 +1196,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -1229,7 +1229,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -1262,7 +1262,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -1296,7 +1296,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -1330,7 +1330,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -1364,7 +1364,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -1397,7 +1397,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -1430,7 +1430,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -1464,7 +1464,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -1509,7 +1509,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -1557,7 +1557,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -1603,7 +1603,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -1649,7 +1649,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -1694,7 +1694,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
@@ -1702,7 +1702,7 @@ I (..\USER\inc\handshake.h)(0x595C8921)
 I (..\Libraries\vl53l0x\vl53l0x.h)(0x5A975A24)
 I (..\Libraries\vl53l0x\vl53l0x_api_core.h)(0x57FB7C70)
 I (D:\Program Files\Keil5\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-F (..\Libraries\vl53l0x\vl53l0x_platform.c)(0x5A927983)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\USER\inc -I ..\USER\src -I ..\README -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32F10x_StdPeriph_Driver\src -I ..\Libraries\vl53l0x-I.\RTE\_SDJR_Project-I"D:\Program Files\Keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Program Files\Keil5\ARM\PACK\Keil\STM32F1xx_DFP\1.1.0\Device\Include"-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD-o .\vl53l0x_platform.o --depend .\vl53l0x_platform.d)
+F (..\Libraries\vl53l0x\vl53l0x_platform.c)(0x5A98EC79)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\USER\inc -I ..\USER\src -I ..\README -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32F10x_StdPeriph_Driver\src -I ..\Libraries\vl53l0x-I.\RTE\_SDJR_Project-I"D:\Program Files\Keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Program Files\Keil5\ARM\PACK\Keil\STM32F1xx_DFP\1.1.0\Device\Include"-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD-o .\vl53l0x_platform.o --depend .\vl53l0x_platform.d)
 I (..\Libraries\vl53l0x\vl53l0x_platform.h)(0x5A9245B2)
 I (..\Libraries\vl53l0x\vl53l0x_def.h)(0x5A92755B)
 I (..\Libraries\vl53l0x\vl53l0x_device.h)(0x57FB7C70)
@@ -1737,7 +1737,7 @@ I (..\USER\inc\Display_Key.h)(0x59E6B8CF)
 I (..\USER\inc\Signal.h)(0x59EED133)
 I (..\USER\inc\Battery.h)(0x59EDE9A6)
 I (..\USER\inc\Actuator.h)(0x5A24ECC9)
-I (..\USER\inc\Gyro.h)(0x5A924E17)
+I (..\USER\inc\Gyro.h)(0x5A98DF1F)
 I (..\USER\inc\PathPlan.h)(0x59E81EA9)
 I (..\USER\inc\Pos.h)(0x59E72C34)
 I (..\USER\inc\Voice.h)(0x597711A5)
