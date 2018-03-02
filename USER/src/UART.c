@@ -664,8 +664,8 @@ void UART_ResponseMaster(void)
     
     //线速度 角速度 角度 单位转换
     lineSpeed = (int32_t)((float)RobotLineSpeed * RPM2MMPERSEC); //r/min -> mm/s  RPM2MMPERSEC
-    angleRate = (int32_t)((float)(-Sys_Anglerate) * 0.1745);   // 0.01du/s -> m弧度/s
-    angle = (int16_t)((float)(-Sys_Angle) * 0.1745);           //0.01du -> m弧度
+    angleRate = (int32_t)((float)(-Sys_Anglerate) * 0.1745);     // 0.01du/s -> m弧度/s
+    angle = (int16_t)((float)(-Sys_Angle) * 0.1745);             //0.01du -> m弧度
     
     //当前航向角
     SendBufPtr->Data.angularPos = angle;

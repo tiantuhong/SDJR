@@ -406,7 +406,7 @@ void I2C_Deal(void)
 //        I2C_ReqDevice[I2C_Req] = I2C_ReqDevice[0];
 //        I2C_ReqLocked = 0;
         
-        if(I2C_Req + I2C_ReqLocked < I2C_DEVICE_NUM)
+        if(I2C_Req + I2C_ReqLocked < I2C_DEVICE_NUM - 1)
         {
             for(i=0; i<I2C_ReqLocked; i++)
             {
@@ -559,7 +559,7 @@ void Single_Write_I2C(uint8_t Device_Num, uint8_t REG_Address,uint8_t REG_data)
 //        I2C_ReqLocked = 1;
 //        I2C_ReqDevice[0] = Device_Num;
         
-        if(I2C_ReqLocked < I2C_DEVICE_NUM)
+        if(I2C_ReqLocked < I2C_DEVICE_NUM - 1)
         {
             I2C_ReqLocked++;
             I2C_ReqDeviceLockedBak[I2C_ReqLocked] = Device_Num;
@@ -567,7 +567,7 @@ void Single_Write_I2C(uint8_t Device_Num, uint8_t REG_Address,uint8_t REG_data)
     }
     else
     {
-        if(I2C_Req < I2C_DEVICE_NUM)
+        if(I2C_Req < I2C_DEVICE_NUM - 1)
         {
             I2C_Req++;
             I2C_ReqDevice[I2C_Req] = Device_Num;
@@ -618,7 +618,7 @@ void Write_I2C(uint8_t Device_Num, uint8_t * REG_Data, uint8_t REG_Len)
     {
 //        I2C_ReqLocked = 1;
 //        I2C_ReqDevice[0] = Device_Num;
-        if(I2C_ReqLocked < I2C_DEVICE_NUM)
+        if(I2C_ReqLocked < I2C_DEVICE_NUM - 1)
         {
             I2C_ReqLocked++;
             I2C_ReqDeviceLockedBak[I2C_ReqLocked] = Device_Num;
@@ -626,7 +626,7 @@ void Write_I2C(uint8_t Device_Num, uint8_t * REG_Data, uint8_t REG_Len)
     }
     else
     {
-        if(I2C_Req < I2C_DEVICE_NUM)
+        if(I2C_Req < I2C_DEVICE_NUM - 1)
         {
             I2C_Req++;
             I2C_ReqDevice[I2C_Req] = Device_Num;
@@ -670,7 +670,7 @@ void Read_I2C(uint8_t Device_Num, uint8_t REG_Address, uint8_t REG_ReadBytes)
     {
 //        I2C_ReqLocked = 1;
 //        I2C_ReqDevice[0] = Device_Num;
-        if(I2C_ReqLocked < I2C_DEVICE_NUM)
+        if(I2C_ReqLocked < I2C_DEVICE_NUM - 1)
         {
             I2C_ReqLocked++;
             I2C_ReqDeviceLockedBak[I2C_ReqLocked] = Device_Num;
@@ -678,7 +678,7 @@ void Read_I2C(uint8_t Device_Num, uint8_t REG_Address, uint8_t REG_ReadBytes)
     }
     else
     {
-        if(I2C_Req < I2C_DEVICE_NUM)
+        if(I2C_Req < I2C_DEVICE_NUM - 1)
         {
             I2C_Req++;
             I2C_ReqDevice[I2C_Req] = Device_Num;
@@ -721,7 +721,7 @@ void ReadOnly_I2C(uint8_t Device_Num, uint8_t *Rev_Reg, uint8_t REG_ReadBytes)
     {
 //        I2C_ReqLocked = 1;
 //        I2C_ReqDevice[0] = Device_Num;
-        if(I2C_ReqLocked < I2C_DEVICE_NUM)
+        if(I2C_ReqLocked < I2C_DEVICE_NUM - 1)
         {
             I2C_ReqLocked++;
             I2C_ReqDeviceLockedBak[I2C_ReqLocked] = Device_Num;
@@ -729,7 +729,7 @@ void ReadOnly_I2C(uint8_t Device_Num, uint8_t *Rev_Reg, uint8_t REG_ReadBytes)
     }
     else
     {
-        if(I2C_Req < I2C_DEVICE_NUM)
+        if(I2C_Req < I2C_DEVICE_NUM - 1)
         {
             I2C_Req++;
             I2C_ReqDevice[I2C_Req] = Device_Num;
@@ -972,7 +972,7 @@ void I2C2_EV_IRQHandler(void)
 		}
 	}
     
-    //发送接收器非空中断
+    //发送接收器空中断
     if(I2C_GetITStatus(I2C2,I2C_IT_TXE) != RESET)
     {
         
@@ -992,9 +992,13 @@ void I2C2_EV_IRQHandler(void)
                 I2C_Core->I2C_Dir = I2C_DIR_READ;
                 I2C_GenerateSTART(I2C2, ENABLE);
             }
-            else
+            else if(I2C_Core->I2C_Dir == I2C_DIR_WRITE)
             {
 
+                I2C_GenerateSTOP(I2C2, ENABLE);
+                I2CFrameTrans = ENABLE; 
+                
+                I2C_Status = 0; 
             }
 
         }
@@ -1012,7 +1016,7 @@ void I2C2_EV_IRQHandler(void)
         }
         else if(I2C_Core->I2C_Dir == I2C_DIR_READ)
         {
-
+//            I2C_Status = 0; 
         }
         else if(I2C_Core->I2C_Dir == I2C_DIR_RW)
         {

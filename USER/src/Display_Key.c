@@ -396,7 +396,7 @@ void Key_Deal(void)
 //                RemoteSet(sig_reset_wifi);
                 if(PathPlanMode == 0)
                 {
-//                    PathPlanMode = 3;
+                    PathPlanMode = 3;
                     PathPlanStep = 0;
                     SubStep = 0;
                     UltraFrontDisMin = 0xffff;
