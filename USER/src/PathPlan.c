@@ -73,8 +73,8 @@ int16_t   PathPlanAngle;
 #define ROBOT_LINE_DISATNCE	10000			// mm
 #define PSD_WALL_DIS_MAX    450//900             //1641
 #define PSD_WALL_DIS_MAX2   1200//1641
-#define REDSINGALDIS        200
-#define REDSINGALDIS2       250
+#define REDSINGALDIS        400//200
+#define REDSINGALDIS2       500//250
 #define CLOSEWALLSTEPDIS    75
 
 #define ROBOT_CLOSE_WALL_SPEED  160 //mm/s

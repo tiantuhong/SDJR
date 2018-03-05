@@ -994,10 +994,8 @@ void I2C2_EV_IRQHandler(void)
             }
             else if(I2C_Core->I2C_Dir == I2C_DIR_WRITE)
             {
-
                 I2C_GenerateSTOP(I2C2, ENABLE);
                 I2CFrameTrans = ENABLE; 
-                
                 I2C_Status = 0; 
             }
 
@@ -1011,7 +1009,6 @@ void I2C2_EV_IRQHandler(void)
         {
             I2C_GenerateSTOP(I2C2, ENABLE);
             I2CFrameTrans = ENABLE; 
-            
             I2C_Status = 0;    
         }
         else if(I2C_Core->I2C_Dir == I2C_DIR_READ)
