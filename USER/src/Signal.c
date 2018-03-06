@@ -75,7 +75,7 @@ uint16_t PSD_Distance;
  * 宏定义                                       *
  *----------------------------------------------*/
 //#define EARTH_CHECK_SIGNAL_IN
-#define  LIGHTWEIGHT_OBSTACLE_CHECK_EN
+//#define  LIGHTWEIGHT_OBSTACLE_CHECK_EN
 #define  ULTRA_JUMP_VAL		300
 #define  ULTRA_CHANGE_VAL	15
 
@@ -338,10 +338,13 @@ void SignalCheck(void)
 #endif
     
     //PSD 距离计算
-    if(ADCDataValid[7])
+//    if(ADCDataValid[7])
+//    {
+//        ADCDataValid[7] = DISABLE;
+        
+    if(vl53l0x_data_valid)
     {
-        ADCDataValid[7] = DISABLE;
-                
+         vl53l0x_data_valid = 0;       
 //        PSD_AD = filter_1_x(ADC_ConvertedValue_Val[7], PSD_AD, K_x, new_flag_x);
 //        
 //        PSD_Distance = PSDVoltoDis(PSD_AD);
@@ -349,7 +352,7 @@ void SignalCheck(void)
         //测试VL53L0x的数据作为沿边的数据
         PSD_AD = filter_1_x(vl53l0x_Results, PSD_AD, K_x, new_flag_x);
         
-        PSD_Distance = PSD_AD << 3;//PSDVoltoDis(PSD_AD);
+        PSD_Distance = vl53l0x_Results;//PSD_AD ;//PSDVoltoDis(PSD_AD);
     }
 //#if 0
 //	if(ADCDataValid[7] == ENABLE)

@@ -71,9 +71,9 @@ int16_t   PathPlanAngle;
 #define START_POS_RANGE		8000			//0.01mm
 #define END_POS_RANGE		6000			//0.01mm
 #define ROBOT_LINE_DISATNCE	10000			// mm
-#define PSD_WALL_DIS_MAX    450//900             //1641
-#define PSD_WALL_DIS_MAX2   1200//1641
-#define REDSINGALDIS        400//200
+#define PSD_WALL_DIS_MAX    900 //450//            //1641
+#define PSD_WALL_DIS_MAX2   1641 //1200//
+#define REDSINGALDIS        50//200
 #define REDSINGALDIS2       500//250
 #define CLOSEWALLSTEPDIS    75
 
@@ -2331,6 +2331,7 @@ void CloseToWall2(void)
             RobitRunbyRouteMode = 2;
 //            SetRobitLineAnglerate(0, 8000);
             PathPlanStep = 6;
+            break;
         case 6:
             
             break;

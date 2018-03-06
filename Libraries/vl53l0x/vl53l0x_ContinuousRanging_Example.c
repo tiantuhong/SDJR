@@ -11,7 +11,7 @@ VL53L0X_Dev_t *pMyDevice = &MyDevice;
 VL53L0X_RangingMeasurementData_t    RangingMeasurementData;
 VL53L0X_RangingMeasurementData_t   *pRangingMeasurementData    = &RangingMeasurementData;
 uint16_t vl53l0x_Results;
-uint8_t vl53l0x_Mesure_En = 0 ,vl53l0x_init_En = 0;
+uint8_t vl53l0x_Mesure_En = 0 ,vl53l0x_init_En = 0, vl53l0x_data_valid = 0;
 
 void print_pal_error(VL53L0X_Error Status){
     char buf[VL53L0X_MAX_STRING_LENGTH];
@@ -268,7 +268,7 @@ void vl53l0x_test(void)
     if(I2C_Req)
         return;
     
-    I2C_ReqLock = 1; 
+//    I2C_ReqLock = 1; 
     
     if(!init)
     {
@@ -301,12 +301,13 @@ void vl53l0x_test(void)
         // Clear the interrupt
         VL53L0X_ClearInterruptMask(pMyDevice, VL53L0X_REG_SYSTEM_INTERRUPT_GPIO_NEW_SAMPLE_READY);
         VL53L0X_PollingDelay(pMyDevice);
+        vl53l0x_data_valid = 1;
     } 
     else 
     {
         vl53l0x_Mesure_En = 1;
     }
-    I2C_ReqLock = 0;
+//    I2C_ReqLock = 0;
 }
 
 

@@ -548,8 +548,8 @@ void UART2_SendData(void)
         
         SendBufPtr->Data[0] = vl53l0x_Results >> 8;
         SendBufPtr->Data[1] = vl53l0x_Results;
-        SendBufPtr->Data[2] = test1 >> 8;
-        SendBufPtr->Data[3] = test1;
+        SendBufPtr->Data[2] = PSD_Distance >> 8;
+        SendBufPtr->Data[3] = PSD_Distance;
         SendBufPtr->Data[4] = test2 >> 8; 
         SendBufPtr->Data[5] = test2;
         SendBufPtr->Data[6] = I2C_Status;

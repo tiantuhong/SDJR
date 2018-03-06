@@ -51,7 +51,7 @@
 #define PID_Ki_ANGLE    (float)0
 #define PID_Kd_ANGLE    (float)18
 
-#define PID_KP_BOUNDRY  (float)5
+#define PID_KP_BOUNDRY  (float)10 //5
 #define PID_Ki_BOUNDRY  (float)0
 #define PID_Kd_BOUNDRY  (float)400
 

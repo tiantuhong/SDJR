@@ -93,5 +93,6 @@ extern void Gyro_Calibration(void);
 extern void Single_Write_I2C(uint8_t Device_Num, uint8_t REG_Address,uint8_t REG_data);
 extern void Write_I2C(uint8_t Device_Num, uint8_t * REG_Data, uint8_t REG_Len);
 extern void ReadOnly_I2C(uint8_t Device_Num, uint8_t *Rev_Reg, uint8_t REG_ReadBytes);
+extern void Gyro_Icm_DataRead(void);
 
 #endif

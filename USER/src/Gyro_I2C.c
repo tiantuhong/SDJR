@@ -68,7 +68,7 @@ uint8_t IIcRevBytes;
 uint8_t I2C_RevDataVL53L0X[10];
 FunctionalState GyroReady,GyroDataVlid;
 uint16_t Icm_Init_Cnt = 0;
-uint8_t Battery_Charge_En;
+uint8_t Battery_Charge_En, Gyro_Icm_DataReady;
 
 /*----------------------------------------------*
  * 模块级变量                                   *
@@ -171,6 +171,7 @@ void Gyro_Conf(void)
     I2C_Req = 0;
     
     Battery_Charge_En = 0;
+    Gyro_Icm_DataReady = 0;
 }
 
 #define CHARGE_DEVICE_ADDR  0x12
@@ -425,6 +426,15 @@ void I2C_Deal(void)
     
 }
 
+void Gyro_Icm_DataRead(void)
+{
+    if(!Gyro_Icm_DataReady)
+        return;
+    Gyro_Icm_DataReady = 0;
+    
+    Read_I2C(I2C_DEVICE_GYRO_ICM, ACCEL_XOUT_H, 14);
+}
+
 /*****************************************************************************
  函 数 名  : EXTI15_10_IRQHandler
  功能描述  : 陀螺仪中断
@@ -460,9 +470,11 @@ void EXTI3_IRQHandler(void)
 //        Test2_Sw;
         if(GyroIcmInit)
         {
-                        
+            //20180305 由中断过程中读取，改为置标志位在主循环中读取，解决和VL53L0X的冲突问题
+            Gyro_Icm_DataReady = 1;
+            
             //20170828 - 陀螺仪改为6轴陀螺仪ICM20608D, GGPM01不使用
-            Read_I2C(I2C_DEVICE_GYRO_ICM, ACCEL_XOUT_H, 14);
+//            Read_I2C(I2C_DEVICE_GYRO_ICM, ACCEL_XOUT_H, 14);
 //            Test2_Sw;
         }
         else
@@ -994,9 +1006,9 @@ void I2C2_EV_IRQHandler(void)
             }
             else if(I2C_Core->I2C_Dir == I2C_DIR_WRITE)
             {
-                I2C_GenerateSTOP(I2C2, ENABLE);
-                I2CFrameTrans = ENABLE; 
-                I2C_Status = 0; 
+//                I2C_GenerateSTOP(I2C2, ENABLE);
+//                I2CFrameTrans = ENABLE; 
+//                I2C_Status = 0; 
             }
 
         }

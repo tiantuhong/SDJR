@@ -31,10 +31,12 @@ int main(void)
         Ultra_Check();
         PathPlan();
         
+        vl53l0x_test();
         ICM_Init();
+        Gyro_Icm_DataRead(); 
         Gyro_Calibration();
 //        ChargeManageInit();
-//        vl53l0x_test();
+        
 //        Voice_Deal();
         I2C_Deal();     
     }
