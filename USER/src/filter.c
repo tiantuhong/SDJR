@@ -1,4 +1,4 @@
-#define Threshold_1     8       //阈值1用于一阶带参滤波器，参数变化量大于此值时，计数增加
+#define Threshold_1     4       //阈值1用于一阶带参滤波器，参数变化量大于此值时，计数增加
 #define Threshold_2     30      //阈值2用于一阶带参滤波器，计数值大于此值时，增大参数，增强滤波跟随
 #define K_Base          256     //滤波系数的基数，K = K_x / K_Base
 
@@ -52,4 +52,24 @@ int32_t filter_1_x(int32_t NEW_DATA, int32_t OLD_DATA, uint16_t k, u8 flag)
 
     OLD_DATA = ((K_Base - K_x) * OLD_DATA + K_x * NEW_DATA) >> 8;
     return OLD_DATA;
+}
+
+int32_t filter_2_x(int32_t NEW_DATA, int32_t OLD_DATA, uint16_t k)
+{
+    static int32_t sum = 0;
+    static uint16_t cnt = 0;
+    
+    if(cnt < k)
+    {
+        sum += NEW_DATA;
+        cnt++;
+        return sum / cnt;
+    }
+    else
+    {
+        sum += NEW_DATA;
+        sum -= OLD_DATA;
+        return sum / k;
+    }
+        
 }

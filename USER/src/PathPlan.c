@@ -71,10 +71,10 @@ int16_t   PathPlanAngle;
 #define START_POS_RANGE		8000			//0.01mm
 #define END_POS_RANGE		6000			//0.01mm
 #define ROBOT_LINE_DISATNCE	10000			// mm
-#define PSD_WALL_DIS_MAX    900 //450//            //1641
-#define PSD_WALL_DIS_MAX2   1641 //1200//
+#define PSD_WALL_DIS_MAX    100 //450//            //1641
+#define PSD_WALL_DIS_MAX2   130 //1200//
 #define REDSINGALDIS        50//200
-#define REDSINGALDIS2       500//250
+#define REDSINGALDIS2       55//250
 #define CLOSEWALLSTEPDIS    75
 
 #define ROBOT_CLOSE_WALL_SPEED  160 //mm/s

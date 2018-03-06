@@ -1,9 +1,9 @@
 .\filterlpc.o: ..\USER\src\filterLPC.c
 .\filterlpc.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x.h
-.\filterlpc.o: D:\Program Files\Keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm3.h
-.\filterlpc.o: D:\Program Files\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
-.\filterlpc.o: D:\Program Files\Keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h
-.\filterlpc.o: D:\Program Files\Keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h
+.\filterlpc.o: D:\Program\Keil4\ARM\CMSIS\Include\core_cm3.h
+.\filterlpc.o: D:\Program\Keil4\ARM\ARMCC\bin\..\include\stdint.h
+.\filterlpc.o: D:\Program\Keil4\ARM\CMSIS\Include\core_cmInstr.h
+.\filterlpc.o: D:\Program\Keil4\ARM\CMSIS\Include\core_cmFunc.h
 .\filterlpc.o: ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h
 .\filterlpc.o: ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x_conf.h
 .\filterlpc.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h
@@ -33,5 +33,5 @@
 .\filterlpc.o: ..\USER\inc\handshake.h
 .\filterlpc.o: ..\Libraries\vl53l0x\vl53l0x.h
 .\filterlpc.o: ..\USER\inc\imu.h
-.\filterlpc.o: D:\Program Files\Keil5\ARM\ARMCC\Bin\..\include\math.h
+.\filterlpc.o: D:\Program\Keil4\ARM\ARMCC\bin\..\include\math.h
 .\filterlpc.o: ..\USER\inc\filterLPC.h

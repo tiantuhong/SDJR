@@ -33,6 +33,7 @@ uint16_t PSD_AD;
 uint16_t UltraTime2Dis(uint16_t _UltraRevTime_);
 
 extern int32_t filter_1_x(int32_t NEW_DATA, int32_t OLD_DATA,float k,u8 flag);
+extern int32_t filter_2_x(int32_t NEW_DATA, int32_t OLD_DATA, uint16_t k);
 /*----------------------------------------------*
  * 内部函数原型说明                             *
  *----------------------------------------------*/
@@ -350,9 +351,10 @@ void SignalCheck(void)
 //        PSD_Distance = PSDVoltoDis(PSD_AD);
         
         //测试VL53L0x的数据作为沿边的数据
-        PSD_AD = filter_1_x(vl53l0x_Results, PSD_AD, K_x, new_flag_x);
+//        PSD_AD = filter_1_x(vl53l0x_Results, PSD_AD, K_x, new_flag_x);
+        PSD_AD = filter_2_x(vl53l0x_Results, PSD_AD, 16);
         
-        PSD_Distance = vl53l0x_Results;//PSD_AD ;//PSDVoltoDis(PSD_AD);
+        PSD_Distance = PSD_AD;//PSD_AD ;//PSDVoltoDis(PSD_AD);
     }
 //#if 0
 //	if(ADCDataValid[7] == ENABLE)

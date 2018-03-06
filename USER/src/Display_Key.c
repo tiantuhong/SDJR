@@ -397,7 +397,7 @@ void Key_Deal(void)
                 if(PathPlanMode == 0)
                 {
                     PathPlanMode = 3;
-                    PathPlanStep = 5;
+                    PathPlanStep = 0;
                     SubStep = 0;
                     UltraFrontDisMin = 0xffff;
                     BumpCnt = 0;
